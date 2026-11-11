@@ -6,19 +6,42 @@ export function json(data, status = 200, headers = {}) {
       "cache-control": "no-store",
       "x-content-type-options": "nosniff",
       ...headers,
+      "permissions-policy": "microphone=(self)",
     },
   });
 }
 
-export function clientIp(request) {
-  // Cloudflare sets CF-Connecting-IP to the visitor that connected to this
-  // request. When drcharming.net proxies /interview/*, that function must copy
-  // the visitor's CF-Connecting-IP onto the upstream request. A browser-supplied
-  // X-Forwarded-For cannot override it.
+export function secretsMatch(presented, expected) {
+  if (typeof expected !== "string" || expected.length === 0 || typeof presented !== "string") return false;
+  const encoder = new TextEncoder();
+  const left = encoder.encode(presented);
+  const right = encoder.encode(expected);
+  const length = Math.max(left.length, right.length);
+  let diff = left.length === right.length ? 0 : 1;
+  for (let index = 0; index < length; index += 1) {
+    diff |= (left[index] || 0) ^ (right[index] || 0);
+  }
+  return diff === 0;
+}
+
+function firstForwardedFor(request) {
+  const raw = request.headers.get("x-forwarded-for");
+  if (!raw) return "";
+  return raw.split(",")[0].trim();
+}
+
+export function clientIp(request, env) {
+  // Direct visitors are keyed by CF-Connecting-IP. X-Forwarded-For is ignored
+  // unless the proxy proves itself with INTERVIEW_PROXY_SECRET, because
+  // Cloudflare replaces CF-Connecting-IP on subrequests to *.pages.dev.
+  const expected = env?.INTERVIEW_PROXY_SECRET;
+  const presented = request.headers.get("x-interview-proxy-secret") || "";
+  if (secretsMatch(presented, expected)) {
+    const forwarded = firstForwardedFor(request);
+    if (forwarded) return forwarded;
+  }
   const cf = request.headers.get("CF-Connecting-IP");
   if (cf && cf.trim()) return cf.trim();
-  const forwarded = request.headers.get("x-forwarded-for");
-  if (forwarded) return forwarded.split(",")[0].trim();
   return "local";
 }
 

@@ -3,3 +3,5 @@
 GEMINI_API_KEY=
 GEMINI_MODEL=gemini-3.8-flash
 GEMINI_TRANSCRIBE_MODEL=gemini-3.8-flash
+# 與 drcharming.net 那個 Pages 專案使用同一組隨機字串。留空則只依 CF-Connecting-IP 限流。
+INTERVIEW_PROXY_SECRET=

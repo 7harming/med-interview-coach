@@ -56,7 +56,8 @@ cp .dev.vars.example .dev.vars
 
 1. 打開該 Pages 專案 → Settings → Variables and Secrets。
 2. 新增加密的 secret，名稱 `GEMINI_API_KEY`，貼上 Gemini 金鑰。Production 要勾。
-3. 可選的純文字變數：`GEMINI_MODEL`、`GEMINI_TRANSCRIBE_MODEL`。
+3. 再新增一個加密 secret，名稱 `INTERVIEW_PROXY_SECRET`。自己產生一組夠長的隨機字串，Production 要勾。同一個值也要設在 `drcharming.net` 那個 Pages 專案（Oncall-simulation）。兩邊不一致時，反代流量會被算成同一個邊緣 IP。
+4. 可選的純文字變數：`GEMINI_MODEL`、`GEMINI_TRANSCRIBE_MODEL`。
 
 可選的速率限制 KV：
 
@@ -82,9 +83,14 @@ cp .dev.vars.example .dev.vars
 | `POST /interview/api/interview` | 同上 |
 | `POST /interview/api/coach` | 同上 |
 
-`https://med-interview-coach.pages.dev/` 會 302 到 `/interview/`。方法、query、body 與 `Content-Type` 要原樣轉送。
+`https://med-interview-coach.pages.dev/` 會 302 到 `/interview/`。方法、query、body 與 `Content-Type` 要原樣轉送。頁面與 API 回應都帶 `Permissions-Policy: microphone=(self)`，反代請把這個標頭傳回瀏覽器，麥克風才不會被策略擋下。
 
-速率限制只認 `CF-Connecting-IP`。反代必須把訪客連到 drcharming.net 時的那個 `CF-Connecting-IP` 抄到上游請求。有這個標頭時，`X-Forwarded-For` 不會被拿來分桶，避免別人自己改標頭繞過限制。本機沒有 `CF-Connecting-IP` 時才退回 `X-Forwarded-For` 的第一個位址。
+Cloudflare 打到 `*.pages.dev` 的子請求會改寫 `CF-Connecting-IP`，所以不能靠它分辨反代後面的訪客。反代要另外做兩件事：
+
+1. 把訪客的 IP 放在 `X-Forwarded-For` 的第一個值。
+2. 加上標頭 `X-Interview-Proxy-Secret`，值是兩邊 Pages 專案共用的 `INTERVIEW_PROXY_SECRET`。
+
+密鑰以固定時間比較。對上了，速率限制用 `X-Forwarded-For` 的第一個位址；沒設密鑰、沒帶標頭或值不對，就只用 `CF-Connecting-IP`，並忽略 `X-Forwarded-For`，避免訪客自己偽造。這個程式不會把密鑰寫進日誌或回應。
 
 ## 速率限制
 
@@ -98,7 +104,7 @@ cp .dev.vars.example .dev.vars
 
 沒有綁定 `RATE_LIMIT_KV` 時，次數記在該 isolate 的記憶體。重新啟動、或請求落到另一個節點，次數就歸零，擋不住分散式濫用。這是本機開發與尚未綁 KV 時的行為。
 
-正式環境請用上一節的儀表板綁定。KV 只存 IP 的雜湊與次數，不存逐字稿。它是最終一致，短時間爆量可能略為超過上限。沒有使用 Durable Objects。分桶用的是上游看到的 `CF-Connecting-IP`，所以反代一定要轉送訪客原本的那個值。
+正式環境請用上一節的儀表板綁定。KV 只存 IP 的雜湊與次數，不存逐字稿。它是最終一致，短時間爆量可能略為超過上限。沒有使用 Durable Objects。直接連到這個專案的人依 `CF-Connecting-IP` 分桶；從 drcharming.net 反代、且密鑰正確的請求改依 `X-Forwarded-For` 的第一個位址分桶。
 
 ## 隱私
 

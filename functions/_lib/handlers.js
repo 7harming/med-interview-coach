@@ -168,7 +168,7 @@ async function report(session, env) {
 }
 
 async function limit(request, env, bucket) {
-  const result = await enforceRateLimit(env, clientIp(request), bucket);
+  const result = await enforceRateLimit(env, clientIp(request, env), bucket);
   if (result.allowed) return null;
   return json(
     { error: "這個網路位置的練習次數暫時太多，請稍後再試。", retryAfterSeconds: Math.ceil(result.retryAfterMs / 1000) },

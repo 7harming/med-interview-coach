@@ -16,7 +16,7 @@ npm test
 npx wrangler pages dev public --port 8788
 ```
 
-打開 `http://127.0.0.1:8788`。沒有設定 `GEMINI_API_KEY` 時是示範模式：文字回答會得到依你打的內容產生的回饋；若送出錄音，逐字稿是預設例句，不是你的聲音。畫面上方會標明這一點。
+打開 `http://127.0.0.1:8788/interview/`。網站根目錄會轉到這裡。沒有設定 `GEMINI_API_KEY` 時是示範模式：文字回答會得到依你打的內容產生的回饋；若送出錄音，逐字稿是預設例句，不是你的聲音。畫面上方會標明這一點。
 
 ## 接上 Gemini
 
@@ -39,28 +39,52 @@ cp .dev.vars.example .dev.vars
 
 `gemini-3.8-flash` 是目前一般可用、可直接吃音檔的模型，因此預設用它轉寫，才能明確要求繁體中文並保留「嗯、那個、就是」。若改成 `gemini-3.5-transcribe`，後端會改走專用轉寫介面與字級時間戳；該模型公開語言表沒有 `zh-TW`（有簡體華語與粵語），不適合當這個產品的預設。
 
-Cloudflare Pages 的密鑰：
-
-```bash
-npx wrangler pages secret put GEMINI_API_KEY --project-name 你的專案名稱
-```
-
 `GEMINI_MODEL` 與 `GEMINI_TRANSCRIBE_MODEL` 若要覆寫，在 Pages 專案的環境變數設定即可，它們不是密鑰。
 
 ## 部署到 Cloudflare Pages
 
-這個專案是靜態頁面加 Pages Functions，沒有建置步驟。
+這個專案自己一個 Pages 專案，預期名稱是 `med-interview-coach`，網址是 `https://med-interview-coach.pages.dev`。應用程式一律放在 `/interview/`，根目錄會轉址過去。`drcharming.net` 是另一個專案（`7harming/Oncall-simulation`），由那邊的 Pages Function 把 `/interview/*` 反代過來。
 
-1. 在 Cloudflare 建立 Pages 專案，連到這個 git 儲存庫。
-2. 建置指令留空。輸出目錄填 `public`。
-3. 放入上面的 `GEMINI_API_KEY`。
-4. 或在本機執行：
+在 Cloudflare 儀表板用 Git 接上這個儲存庫：
 
-```bash
-npx wrangler pages deploy public --project-name 你的專案名稱
-```
+1. Workers & Pages → Create → Pages → Connect to Git，選 `7harming/med-interview-coach`。
+2. 專案名稱填 `med-interview-coach`。Production branch 填 `main`。
+3. Build command 留空。Build output directory 填 `public`。
+4. 儲存並部署。沒有建置步驟；`functions/` 會跟著 Pages 一起部署。
 
-`wrangler.toml` 的 `pages_build_output_dir` 已設為 `public`。Functions 在 `functions/`，會對應到 `/api/*`。
+金鑰在儀表板設定，不要寫進 git：
+
+1. 打開該 Pages 專案 → Settings → Variables and Secrets。
+2. 新增加密的 secret，名稱 `GEMINI_API_KEY`，貼上 Gemini 金鑰。Production 要勾。
+3. 可選的純文字變數：`GEMINI_MODEL`、`GEMINI_TRANSCRIBE_MODEL`。
+
+可選的速率限制 KV：
+
+1. 在 Workers & Pages → KV 建立一個 namespace。
+2. 回到這個 Pages 專案 → Settings → Bindings → Add → KV namespace。
+3. Variable name 必須是 `RATE_LIMIT_KV`，選剛建立的 namespace。Production 要綁。
+4. 重新部署後才會生效。
+
+## 給 drcharming.net 反代的路徑
+
+反代要保留 `/interview` 前綴，不要拿掉。瀏覽器打 `https://drcharming.net/interview/...` 時，上游是同一個路徑的 `https://med-interview-coach.pages.dev/interview/...`。
+
+| 瀏覽器 | 上游 |
+| --- | --- |
+| `https://drcharming.net/interview/` | `https://med-interview-coach.pages.dev/interview/` |
+| `https://drcharming.net/interview/app.js` | `https://med-interview-coach.pages.dev/interview/app.js` |
+| `https://drcharming.net/interview/styles.css` | `https://med-interview-coach.pages.dev/interview/styles.css` |
+| `https://drcharming.net/interview/favicon.svg` | `https://med-interview-coach.pages.dev/interview/favicon.svg` |
+| `https://drcharming.net/interview/paths.js` | `https://med-interview-coach.pages.dev/interview/paths.js` |
+| `GET /interview/api/health` | 同上，pages.dev |
+| `GET /interview/api/questions` | 同上 |
+| `POST /interview/api/transcribe` | 同上 |
+| `POST /interview/api/interview` | 同上 |
+| `POST /interview/api/coach` | 同上 |
+
+`https://med-interview-coach.pages.dev/` 會 302 到 `/interview/`。方法、query、body 與 `Content-Type` 要原樣轉送。
+
+速率限制只認 `CF-Connecting-IP`。反代必須把訪客連到 drcharming.net 時的那個 `CF-Connecting-IP` 抄到上游請求。有這個標頭時，`X-Forwarded-For` 不會被拿來分桶，避免別人自己改標頭繞過限制。本機沒有 `CF-Connecting-IP` 時才退回 `X-Forwarded-For` 的第一個位址。
 
 ## 速率限制
 
@@ -72,15 +96,9 @@ npx wrangler pages deploy public --project-name 你的專案名稱
 
 音檔最長 3 分鐘、解碼後最大約 6 MB。超過會被拒絕。
 
-沒有綁定 KV 時，次數記在該 isolate 的記憶體。重新啟動、或請求落到另一個節點，次數就歸零，擋不住分散式濫用。這是本機開發與尚未綁 KV 時的行為。
+沒有綁定 `RATE_LIMIT_KV` 時，次數記在該 isolate 的記憶體。重新啟動、或請求落到另一個節點，次數就歸零，擋不住分散式濫用。這是本機開發與尚未綁 KV 時的行為。
 
-正式環境建議建立 Workers KV，綁定名稱必須是 `RATE_LIMIT_KV`：
-
-```bash
-npx wrangler kv namespace create RATE_LIMIT_KV
-```
-
-把回傳的 id 填進 `wrangler.toml` 裡註解掉的 `kv_namespaces`，或在 Pages 的 Settings → Bindings 新增同名 KV。KV 只存 IP 的雜湊與次數，不存逐字稿。它是最終一致，短時間爆量可能略為超過上限。沒有使用 Durable Objects。
+正式環境請用上一節的儀表板綁定。KV 只存 IP 的雜湊與次數，不存逐字稿。它是最終一致，短時間爆量可能略為超過上限。沒有使用 Durable Objects。分桶用的是上游看到的 `CF-Connecting-IP`，所以反代一定要轉送訪客原本的那個值。
 
 ## 隱私
 

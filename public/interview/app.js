@@ -1,3 +1,5 @@
+import { apiUrl } from "./paths.js";
+
 const HISTORY_KEY = "med-interview-history-v1";
 const AUDIO_CAP_MS = 180000;
 const DIFFICULTY = { easy: "易", medium: "中", hard: "難" };
@@ -23,8 +25,8 @@ async function init() {
   window.addEventListener("hashchange", render);
   try {
     const [health, bank] = await Promise.all([
-      fetch("/api/health").then(readJson),
-      fetch("/api/questions").then(readJson),
+      fetch(apiUrl("api/health")).then(readJson),
+      fetch(apiUrl("api/questions")).then(readJson),
     ]);
     state.health = health;
     state.bank = bank;
@@ -48,18 +50,26 @@ function render() {
   else if (route.startsWith("#/history")) shell.append(historyView());
   else if (route.startsWith("#/privacy")) shell.append(privacyView());
   else shell.append(homeView());
+  shell.append(el("footer", { class: "site-footer" }, [homeLink()]));
   app.append(shell);
 }
 
 function topbar(route) {
   const link = (hash, label) => el("a", { href: hash, ...(route.startsWith(hash) ? { "aria-current": "page" } : {}) }, label);
-  return el("header", { class: "top" }, [
-    el("a", { class: "brand", href: "#/" }, [
-      el("span", { class: "stamp", "aria-hidden": "true" }, "面試"),
-      el("span", {}, [el("strong", {}, "醫學系模擬面試"), el("small", {}, "個人申請／繁星二階練習")]),
+  return el("header", {}, [
+    el("div", { class: "top" }, [
+      el("a", { class: "brand", href: "#/" }, [
+        el("span", { class: "stamp", "aria-hidden": "true" }, "面試"),
+        el("span", {}, [el("strong", {}, "醫學系模擬面試"), el("small", {}, "個人申請／繁星二階練習")]),
+      ]),
+      el("nav", { class: "nav", "aria-label": "主要" }, [link("#/setup", "開始"), link("#/history", "紀錄"), link("#/privacy", "隱私")]),
     ]),
-    el("nav", { class: "nav", "aria-label": "主要" }, [link("#/setup", "開始"), link("#/history", "紀錄"), link("#/privacy", "隱私")]),
+    el("p", { class: "back-link" }, [homeLink()]),
   ]);
+}
+
+function homeLink() {
+  return el("a", { href: "https://drcharming.net/" }, "回到「我就怕被罵嘛」");
 }
 
 function homeView() {
@@ -478,7 +488,7 @@ async function submitAudio() {
   render();
   try {
     const audioBase64 = await blobToBase64(session.blob);
-    const data = await postJson("/api/transcribe", {
+    const data = await postJson(apiUrl("api/transcribe"), {
       audioBase64,
       mimeType: session.mime || session.blob.type,
       durationMs: Math.round(session.elapsed || 1000),
@@ -504,7 +514,7 @@ async function submitText() {
   state.session.error = "";
   render();
   try {
-    const data = await postJson("/api/transcribe", { text });
+    const data = await postJson(apiUrl("api/transcribe"), { text });
     state.session.pending = data;
     state.draft = "";
     await adoptTranscript();
@@ -532,7 +542,7 @@ async function adoptTranscript() {
   session.error = "";
   render();
   try {
-    const data = await postJson("/api/interview", {
+    const data = await postJson(apiUrl("api/interview"), {
       questionId: item.question.id,
       mode: session.mode,
       turns: apiTurns(item),
@@ -592,7 +602,7 @@ async function beginReflect() {
   session.error = "";
   location.hash = "#/reflect";
   try {
-    const data = await postJson("/api/coach", {
+    const data = await postJson(apiUrl("api/coach"), {
       stage: "reflect",
       mode: session.mode,
       items: session.items.map(apiItem),
@@ -610,7 +620,7 @@ async function loadReport(skip) {
   session.error = "";
   render();
   try {
-    session.report = await postJson("/api/coach", {
+    session.report = await postJson(apiUrl("api/coach"), {
       stage: "report",
       mode: session.mode,
       reflectionAnswer: skip ? "" : session.reflectionAnswer,

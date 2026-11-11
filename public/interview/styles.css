@@ -194,7 +194,9 @@ blockquote {
   border-radius: 14px;
   padding: 0.8rem 0.9rem;
 }
-.footer-note { margin-top: 1.5rem; font-size: 0.92rem; }
+.footer-note, .site-footer { margin-top: 1.5rem; font-size: 0.92rem; }
+.site-footer, .back-link { color: var(--ink-soft); }
+.back-link { margin: -0.6rem 0 1rem; font-size: 0.92rem; }
 
 @media (max-width: 640px) {
   .shell { width: min(100% - 1.2rem, 880px); }

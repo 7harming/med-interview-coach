@@ -11,8 +11,12 @@ export function json(data, status = 200, headers = {}) {
 }
 
 export function clientIp(request) {
+  // Cloudflare sets CF-Connecting-IP to the visitor that connected to this
+  // request. When drcharming.net proxies /interview/*, that function must copy
+  // the visitor's CF-Connecting-IP onto the upstream request. A browser-supplied
+  // X-Forwarded-For cannot override it.
   const cf = request.headers.get("CF-Connecting-IP");
-  if (cf) return cf.trim();
+  if (cf && cf.trim()) return cf.trim();
   const forwarded = request.headers.get("x-forwarded-for");
   if (forwarded) return forwarded.split(",")[0].trim();
   return "local";

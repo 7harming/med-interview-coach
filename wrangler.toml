@@ -1,0 +1,10 @@
+name = "med-interview-coach"
+compatibility_date = "2026-11-11"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "public"
+
+# 速率限制用的 KV 請在建立 namespace 後再打開，並把 id 換成你自己的。
+# 沒有這段時，程式會改用每個 isolate 自己的記憶體，重新整理或換節點就會歸零。
+# [[kv_namespaces]]
+# binding = "RATE_LIMIT_KV"
+# id = "YOUR_KV_NAMESPACE_ID"

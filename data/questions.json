@@ -1,0 +1,2098 @@
+{
+  "version": 1,
+  "locale": "zh-TW",
+  "note": "這些是依公開考生回憶與招生簡章改寫的練習題，不是任何學校的當年原題，也不能用來預測錄取。",
+  "questions": [
+    {
+      "id": "q001",
+      "category": "時事與醫療政策",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 60,
+      "answerSeconds": 300,
+      "prompt": "有研究主張：用面試選出的醫學生，日後到醫療資源較少地區服務的意願較高，因此建議增加面試名額，以改善偏鄉醫師不足。你是否同意「用面試來挑選醫學生」？請說明你看到的好處與代價。",
+      "scenario": null,
+      "followUps": [
+        "面試裡說願意下鄉，和真的去服務，中間可能差在哪裡？",
+        "如果資料顯示，面試錄取與考試錄取的人，第一年臨床表現差不多，你剛才的結論要不要改？",
+        "你自己對偏鄉服務的意願，是條件、期限，還是方向？"
+      ],
+      "strongAnswer": "同時處理選才工具的效度、口說意願與實際履約的差距，以及偏鄉缺人的其他原因（生活、家庭、設備、職務分工），而不是只表態贊成或反對面試。",
+      "weakTraps": [
+        "把面試說成萬能或完全沒用，沒有談到它量得到與量不到的東西",
+        "用自己會不會上榜來回答政策問題",
+        "口頭答應下鄉，卻說不出任何具體的生活或專業代價"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立臺灣大學醫學系",
+          "year": "108學年度",
+          "url": "https://www.rulin.com.tw/file/109lae/109lae-2f001.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q002",
+      "category": "時事與醫療政策",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 180,
+      "prompt": "醫學人才跨國流動，常被說成能帶回技術與視野。它會不會和台灣偏鄉留不住醫師這件事互相衝突？請用一個你知道的具體例子說明。",
+      "scenario": null,
+      "followUps": [
+        "醫學系的國際流動，和其他科系的留學，有什麼不一樣？",
+        "若人才外流短期內不會停，國內可以先做哪一件做得到的事？"
+      ],
+      "strongAnswer": "先界定所說的流動是短期訓練、長期移民還是遠距合作，再把個人發展和地區可近性放在同一個框架裡，並舉出聽得懂的例子。",
+      "weakTraps": [
+        "只說國際化很重要或很壞",
+        "把偏鄉缺人完全歸咎於個人不夠有愛心",
+        "舉不出任何例子，只用抽象名詞"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立臺灣大學醫學系",
+          "year": "109學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1591288357.A.D5D.html"
+        }
+      ]
+    },
+    {
+      "id": "q003",
+      "category": "時事與醫療政策",
+      "format": "traditional",
+      "difficulty": "hard",
+      "readingSeconds": 0,
+      "answerSeconds": 180,
+      "prompt": "假設你看到一張折線圖：過去二十年，幾個高收入國家的醫療支出占國內生產毛額的比例都上升，但上升速度不同。請說明你會先讀圖上的哪些資訊，再提出兩個可能原因。不要把圖上沒有的數字說成事實。",
+      "scenario": null,
+      "followUps": [
+        "支出變高，一定代表醫療變好嗎？",
+        "若另一張圖把醫師人力和護理人力分成四區，住院天數特別長的國家可能落在哪一區？你的根據是什麼？"
+      ],
+      "strongAnswer": "先描述趨勢與國家之間的差異，區分老化、技術價格、給付制度與疾病型態等機制，並承認沒有圖就無法指定是哪一個原因。",
+      "weakTraps": [
+        "沒有讀圖就直接批評某一國的制度",
+        "把相關當成唯一因果",
+        "編造圖上沒有寫的百分比"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立臺灣大學醫學系",
+          "year": "110學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1619424371.A.FE9.html"
+        }
+      ]
+    },
+    {
+      "id": "q004",
+      "category": "時事與醫療政策",
+      "format": "mmi",
+      "difficulty": "hard",
+      "readingSeconds": 70,
+      "answerSeconds": 300,
+      "prompt": "一張散佈圖顯示：收入較低的人平均餘命較短，收入較高的人平均餘命較長。請說明你看到的現象、兩個可能原因，以及全民健保能處理與不能處理的部分。",
+      "scenario": "圖的橫軸是家庭收入分組，縱軸是平均餘命。點由左下往右上分布，但不是一條直線，中間有幾組重疊。沒有給出每一組的精確歲數。",
+      "followUps": [
+        "若要改善，你會先動醫療，還是先動醫療以外的條件？為什麼？",
+        "部分負擔若調高，可能同時發生哪兩件相反的事？",
+        "這張圖能證明收入本身造成餘命差距嗎？"
+      ],
+      "strongAnswer": "描述分布而不是背結論；原因至少包含就醫延遲與醫療以外的生活條件；對健保的說法有邊界，並避免宣稱圖本身證明了因果。",
+      "weakTraps": [
+        "把圖直接說成健保失敗或健保成功",
+        "只要求全部免費，不談排擠與濫用",
+        "用單一原因解釋餘命"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立臺灣大學醫學系",
+          "year": "113學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1717072819.A.505.html"
+        }
+      ]
+    },
+    {
+      "id": "q005",
+      "category": "時事與醫療政策",
+      "format": "mmi",
+      "difficulty": "hard",
+      "readingSeconds": 70,
+      "answerSeconds": 360,
+      "prompt": "你參與一種新藥的研發。它對某一種發生在偏鄉的病情特別有效，但定價遠高於當地家庭與現有給付能負擔的範圍。你會怎麼做？",
+      "scenario": "這種病目前已有較便宜、效果較差的治療。新藥的證據來自中型臨床試驗，長期副作用尚未完整。公司須回收研發成本，其他地區也有病人在等同一條產線。",
+      "followUps": [
+        "若降價會讓其他地區的病人排得更後面，你還堅持嗎？",
+        "什麼新資料會讓你放棄在當地推這個藥？",
+        "你會先找誰談：公司、給付單位、當地診所，還是病人代表？"
+      ],
+      "strongAnswer": "同時看見研發成本、當地病人、其他等待用藥的人與用藥安全；提出的作法在這些限制之內，並保留會改決定的條件。",
+      "weakTraps": [
+        "立刻要求免費贈送或立刻放棄偏鄉",
+        "只批評藥廠或資本主義，沒有下一步",
+        "忽略證據還不完整、當地可能無法安全給藥"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立臺灣大學醫學系",
+          "year": "113學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1717072819.A.505.html"
+        },
+        {
+          "school": "馬偕醫學大學醫學系",
+          "year": "111學年度",
+          "url": "https://home.gamer.com.tw/artwork.php?sn=5471349"
+        }
+      ]
+    },
+    {
+      "id": "q006",
+      "category": "時事與醫療政策",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "藥商想在短影音平台投放一種失智症用藥的廣告。站在一般民眾的位置，你支持嗎？若你是負責衛教的人，你會怎麼使用同一種平台？",
+      "scenario": null,
+      "followUps": [
+        "家屬很焦慮時，廣告和醫師說明哪個比較快被相信？這會造成什麼問題？",
+        "你要如何避免把還沒證實的療效講成希望？"
+      ],
+      "strongAnswer": "分開「商業廣告」與「可查核的衛教」；考慮到失智家庭的焦慮、誇大療效的風險，以及長者不一定使用同一種平台。",
+      "weakTraps": [
+        "用喜不喜歡那家公司來回答",
+        "認為網路上的醫療資訊一律有害或一律有效率",
+        "沒有想到看廣告的人可能不是病人本人"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立臺灣大學醫學系",
+          "year": "113學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1717072819.A.505.html"
+        }
+      ]
+    },
+    {
+      "id": "q007",
+      "category": "時事與醫療政策",
+      "format": "mmi",
+      "difficulty": "hard",
+      "readingSeconds": 80,
+      "answerSeconds": 360,
+      "prompt": "若要讓醫師工時符合勞動基準，有人估計需要明顯增加醫師人數，否則現有服務量會下降。增加國內名額、引進外籍醫師，或調整民眾使用醫療的方式，你認為哪一項應該先討論？為什麼？",
+      "scenario": "前提是：目前急重症與部分專科已經很喘，但總醫師數的統計未必等於每個地區、每個時段都缺人。訓練一位能獨立值班的醫師需要許多年。",
+      "followUps": [
+        "名額變多，訓練品質可能變差。你怎麼取捨？",
+        "外籍醫師的語言、責任歸屬與在地疾病型態，你會先查哪一件？",
+        "民眾很方便地使用醫療，對工時有什麼影響？"
+      ],
+      "strongAnswer": "不把三個選項當成互相排斥的口號；把人力、訓練年限、地區分布與民眾使用習慣分開，並說明先做哪一件是因為它解得開哪一個瓶頸。",
+      "weakTraps": [
+        "只說醫師都很辛苦所以政府應該解決",
+        "忽略訓練需要時間，以為今年增額明年就有專科醫師",
+        "把外籍醫師說成威脅或救星，沒有具體條件"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立陽明交通大學醫學系",
+          "year": "107學年度",
+          "url": "https://www.rulin.com.tw/file/109lae/109lae-2f001.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q008",
+      "category": "時事與醫療政策",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 60,
+      "answerSeconds": 300,
+      "prompt": "若現在出生的人有相當比例可以活到很高齡，醫療體系會先被什麼卡住？請提出一個你認為五到十年內做得到的調整。",
+      "scenario": null,
+      "followUps": [
+        "活得久，等於活得健康嗎？",
+        "家庭照顧、長照與急性醫療，你會把錢先放在哪？",
+        "高齡者自己的意願，在這個討論裡容易被誰取代？"
+      ],
+      "strongAnswer": "區分壽命與健康餘命；指出人力、照顧與給付可能比新藥更早碰到極限；提出的調整具體到一個行動者。",
+      "weakTraps": [
+        "只慶祝醫學進步或只悲觀",
+        "把老人問題說成家庭不夠孝順",
+        "列出很多口號，沒有任何一個做得到的調整"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立陽明交通大學醫學系",
+          "year": "108學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1555311796.A.D79.html"
+        }
+      ]
+    },
+    {
+      "id": "q009",
+      "category": "時事與醫療政策",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 60,
+      "answerSeconds": 300,
+      "prompt": "疫情嚴重時，有的地方讓剛畢業、還沒完成完整臨床訓練的人直接投入現場。你支持這種做法嗎？請說明你要保護的是誰。",
+      "scenario": "現場人力不足，病人正在增加。這些新人有基本執照，但缺乏獨立處理急症的經驗。監督他們的資深人員自己也在超時工作。",
+      "followUps": [
+        "若你是那位新人，你會拒絕什麼、接受什麼？",
+        "病人有權知道照顧自己的人訓練到哪裡嗎？",
+        "短期補上人力之後，哪些後果會留到疫情結束？"
+      ],
+      "strongAnswer": "同時看病人當下的安全、新人的能力邊界與資深人員的負荷；若支持，要有監督條件；若反對，要提出人力不足時的替代。",
+      "weakTraps": [
+        "用勇敢或怕事來評價新人",
+        "只站在醫院行政或只站在學生",
+        "沒有談到病人知的權利與出錯時的責任"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立陽明交通大學醫學系",
+          "year": "109學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1588060631.A.99B.html"
+        }
+      ]
+    },
+    {
+      "id": "q010",
+      "category": "時事與醫療政策",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 70,
+      "answerSeconds": 360,
+      "prompt": "長照服務想做一個給長者用的應用程式。請提出三項你認為必要的功能，並說明如何避免它只服務已經會用手機的人。",
+      "scenario": "使用者包含獨居長者、與子女同住但子女白天不在的人，以及完全不使用智慧型手機的人。預算不夠同時做很完整的人工客服。",
+      "followUps": [
+        "若家屬的方便和長者的隱私衝突，你留哪一個？",
+        "功能再多，誰負責發現長者跌倒或沒有服藥？",
+        "你會怎麼知道這個程式沒有把不會用的人排除在外？"
+      ],
+      "strongAnswer": "功能對得上真實需求（聯絡、用藥、緊急），並提出非數位的替代路徑；看見隱私、家屬與不會使用科技的人。",
+      "weakTraps": [
+        "把功能清單當成產品發表，沒有使用者",
+        "假設每位長者都有會操作手機的子女",
+        "只談科技很方便，不談公平"
+      ],
+      "inspiredBy": [
+        {
+          "school": "高雄醫學大學醫學系",
+          "year": "114學年度",
+          "url": "https://www.dcard.tw/f/freshman/p/261806560"
+        }
+      ]
+    },
+    {
+      "id": "q011",
+      "category": "時事與醫療政策",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 60,
+      "answerSeconds": 300,
+      "prompt": "請舉一種疾病，說明它在台灣出現健康不平等的方式，以及一個你認為改得動的環節。",
+      "scenario": "健康不平等可以是發生率、診斷早晚、治療完成率或預後的差距。請註明你的例子是觀察、新聞還是課堂所學；不確定就說不確定。",
+      "followUps": [
+        "這個差距是因為個人行為，還是因為人碰不到服務？你怎麼區分？",
+        "若資源只夠做一件事，你做篩檢、治療還是病後生活支持？",
+        "你的例子若事後被證明是錯的，你的判斷還剩下什麼？"
+      ],
+      "strongAnswer": "疾病例子具體，差距的環節清楚，改進對得上原因；對自己訊息的把握程度誠實。",
+      "weakTraps": [
+        "只說弱勢很可憐，沒有疾病也沒有機制",
+        "把不平等完全歸咎於個人不自律",
+        "提出一個沒有人負責、也沒有資源來源的口號"
+      ],
+      "inspiredBy": [
+        {
+          "school": "高雄醫學大學醫學系",
+          "year": "114學年度",
+          "url": "https://www.dcard.tw/f/freshman/p/261806560"
+        }
+      ]
+    },
+    {
+      "id": "q012",
+      "category": "時事與醫療政策",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 180,
+      "prompt": "有人說「醫療是社會正義」。請從台灣的健保談：這句話哪一部分成立，哪一部分會被浪費、等待或地區差距挑戰？",
+      "scenario": null,
+      "followUps": [
+        "你會保留健保的哪一項原則，即使它造成不便？",
+        "若你只能改一個使用行為，你會改民眾、醫院還是給付規則？"
+      ],
+      "strongAnswer": "把可近性、財務、品質與責任放在一起；讚成與批評都有例子，而不是背健保優缺點清單。",
+      "weakTraps": [
+        "只說健保是全世界最棒或已經破產",
+        "缺點清單很長，但沒有任何保留得下來的原則",
+        "把所有問題都推給民眾濫用或都推給醫院"
+      ],
+      "inspiredBy": [
+        {
+          "school": "高雄醫學大學醫學系",
+          "year": "114學年度",
+          "url": "https://www.dcard.tw/f/freshman/p/261806560"
+        },
+        {
+          "school": "輔仁大學醫學系",
+          "year": "年份未標明",
+          "url": "https://university.1111.com.tw/zone/university/discussTopic.asp?cat=University&id=349662"
+        }
+      ]
+    },
+    {
+      "id": "q013",
+      "category": "時事與醫療政策",
+      "format": "mmi",
+      "difficulty": "hard",
+      "readingSeconds": 60,
+      "answerSeconds": 300,
+      "prompt": "一則新聞說，研究在人體組織裡測到塑膠微粒。報導語氣很驚悚。你會如何判斷這則新聞能不能指導生活或政策？",
+      "scenario": "你手邊只有新聞摘要，沒有原始論文。摘要沒有寫樣本數、對照組，也沒有寫微粒與疾病之間的時間順序。",
+      "followUps": [
+        "在證據還不夠時，個人可以做哪一件低成本的事？",
+        "政府若現在就全面禁某一種材料，可能傷害誰？",
+        "你會去哪裡找原始資料？找到以前你不行動嗎？"
+      ],
+      "strongAnswer": "區分偵測到物質、造成疾病、以及政策應不應該立刻禁止；承認摘要不夠，並提出在不確定時仍可做的小步驟。",
+      "weakTraps": [
+        "因為新聞很可怕就當成定論",
+        "因為研究還沒完成就說完全不用理",
+        "假装自己讀過論文"
+      ],
+      "inspiredBy": [
+        {
+          "school": "高雄醫學大學醫學系",
+          "year": "114學年度",
+          "url": "https://www.dcard.tw/f/freshman/p/261806560"
+        }
+      ]
+    },
+    {
+      "id": "q014",
+      "category": "時事與醫療政策",
+      "format": "traditional",
+      "difficulty": "hard",
+      "readingSeconds": 0,
+      "answerSeconds": 180,
+      "prompt": "另一個國家為了補醫師人力而大幅增加醫學生名額，住院醫師以勞動條件為由集體停止部分工作。這件事對台灣討論「要不要增額」有什麼提醒？",
+      "scenario": null,
+      "followUps": [
+        "名額、薪資、工時、訓練品質，你認為哪兩個會互相拉扯？",
+        "病人在這種衝突裡算哪一方？他們的需要如何被放進討論？"
+      ],
+      "strongAnswer": "不直接移植外國結論；指出增額若沒有同時處理訓練位置與勞動條件，衝突會出現在病人身上，並說明台灣不能照抄的條件。",
+      "weakTraps": [
+        "只批評罷工的人或只批評政府",
+        "把外國新聞講成台灣事實",
+        "完全不提病人在衝突當下怎麼辦"
+      ],
+      "inspiredBy": [
+        {
+          "school": "馬偕醫學大學醫學系",
+          "year": "113學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1716208070.A.5DB.html"
+        }
+      ]
+    },
+    {
+      "id": "q015",
+      "category": "時事與醫療政策",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 90,
+      "answerSeconds": 300,
+      "prompt": "你有一筆不能拆開的經費，只能整筆投入下列其中一項。請排序並說明第一名與最後一名的理由：失業者的再訓練、缺水地區的飲水、疫苗研發、疫情熱區的防護裝備。",
+      "scenario": "四項都有人會因此活下來或保住生計。你不知道明年還會不會有同樣的一筆錢。請明示你用的排序原則，例如立即性、可逆性、你能負責的範圍。",
+      "followUps": [
+        "若第一名的成效要三年後才看得到，你還排它嗎？",
+        "把錢放在本國與放在海外，你的原則會不會不一致？",
+        "哪一項你其實沒有足夠知識，卻仍然排了名次？"
+      ],
+      "strongAnswer": "先講排序原則，再套到四個選項；承認每一項都有代價，並說明自己知識不足的那一項。",
+      "weakTraps": [
+        "用最感人的故事取代原則",
+        "四項都說很重要，拒絕排序",
+        "最後一名被說成不值得存在"
+      ],
+      "inspiredBy": [
+        {
+          "school": "慈濟大學醫學系",
+          "year": "109學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1587814187.A.C3C.html"
+        }
+      ]
+    },
+    {
+      "id": "q016",
+      "category": "時事與醫療政策",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 180,
+      "prompt": "偏鄉長者因為回診很遠，常自行購買成藥，甚至沒有處方也拿得到某些藥。若你在當地診所或衛生所，你會先處理哪一個環節？",
+      "scenario": null,
+      "followUps": [
+        "藥局私下出售處方藥時，你當下會說什麼、事後會告訴誰？",
+        "病人擔心回診會耽誤農事，你如何把風險講成他聽得懂的話？"
+      ],
+      "strongAnswer": "看見距離、生計、用藥安全與藥事制度；第一步具體，並且不是責備長者。",
+      "weakTraps": [
+        "只叫病人不要亂吃藥",
+        "把責任完全推給藥師或完全推給病人",
+        "提出一個當地根本沒有的大型醫院方案"
+      ],
+      "inspiredBy": [
+        {
+          "school": "義守大學醫學系",
+          "year": "108學年度",
+          "url": "https://stethoscope.pixnet.net/blog/posts/15289409208"
+        }
+      ]
+    },
+    {
+      "id": "q017",
+      "category": "學習歷程延伸",
+      "format": "traditional",
+      "difficulty": "easy",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "請不要報告服務時數。講一個在服務或照顧現場的具體時刻：你原本以為自己在幫忙，後來發現想法要改。",
+      "scenario": null,
+      "followUps": [
+        "那個當下你實際上說了或做了什麼？",
+        "如果對方並不感謝你，你的結論還在嗎？",
+        "這件事和你想讀醫學系的關係，是直接的還是你後來才接上的？"
+      ],
+      "strongAnswer": "有時間、有對象、有自己的誤判與事後的改變；不把時數、幹部職稱或感人結尾當成內容。",
+      "weakTraps": [
+        "只報時數、單位名稱與學會了同理",
+        "把對方講成被你拯救的案例",
+        "沒有服務經驗就編一個，或宣稱因此完全理解病人"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立臺灣大學醫學系",
+          "year": "109學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1591288357.A.D5D.html"
+        },
+        {
+          "school": "國立陽明交通大學醫學系",
+          "year": "年份未標明",
+          "url": "https://www.reallygood.com.tw/winner/inside?print_id=10635&str=04837BACD7AF71C6FE4A5017D0E26901"
+        }
+      ]
+    },
+    {
+      "id": "q018",
+      "category": "學習歷程延伸",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "如果你的小論文或探究使用了一則不是今年的新聞，請說明你為什麼仍選它，以及你如何檢查它有沒有過時。",
+      "scenario": null,
+      "followUps": [
+        "你引用的數字出自哪一種資料？你有沒有看過原始出處？",
+        "若指導老師說題目太舊，你會改題目還是改問法？",
+        "這份探究裡，哪一段是你自己做的，哪一段是資料整理？"
+      ],
+      "strongAnswer": "說得出選題理由、資料的日期與自己做過的查核；分得清整理與自己的貢獻。",
+      "weakTraps": [
+        "因為網路上很多人都引用，所以認為不用查",
+        "答不出方法、樣本或自己的角色",
+        "把小組成果全部說成自己的"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立成功大學醫學系",
+          "year": "年份未標明",
+          "url": "https://www.tkbgo.com.tw/schoolZone/university/article/toDetail?article_id=1861"
+        }
+      ]
+    },
+    {
+      "id": "q019",
+      "category": "學習歷程延伸",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "實驗或探究裡，你的結果和同組同學不一樣。請說明你會先檢查什麼，以及什麼情況下你會堅持自己的結果。",
+      "scenario": null,
+      "followUps": [
+        "若老師傾向採用多數人的結果，你怎麼講？",
+        "你如何避免為了和別人一樣而改數字？",
+        "事後發現是你弄錯了，你會怎麼處理已經寫進報告的句子？"
+      ],
+      "strongAnswer": "先查步驟、紀錄與定義，再談誰對；堅持時有重複驗證的條件，而不是因為面子。",
+      "weakTraps": [
+        "立刻改成和多數人一樣，或立刻認定別人錯",
+        "只說我有照步驟做",
+        "把誤差講成很複雜的專有名詞來結束對話"
+      ],
+      "inspiredBy": [
+        {
+          "school": "高雄醫學大學醫學系",
+          "year": "114學年度",
+          "url": "https://www.dcard.tw/f/freshman/p/261806560"
+        },
+        {
+          "school": "國立成功大學醫學系",
+          "year": "年份未標明",
+          "url": "https://www.tkbgo.com.tw/schoolZone/university/article/toDetail?article_id=1861"
+        }
+      ]
+    },
+    {
+      "id": "q020",
+      "category": "學習歷程延伸",
+      "format": "traditional",
+      "difficulty": "easy",
+      "readingSeconds": 0,
+      "answerSeconds": 120,
+      "prompt": "請從你的學習歷程裡挑一件你寫過的事，只補充一個經得起追問的細節：時間、數量、你的角色，或一個當時沒解決的問題。",
+      "scenario": null,
+      "followUps": [
+        "這個數字是你數過的，還是大概印象？",
+        "若教授說這段寫得比事實好看，你會承認哪一句？",
+        "這件事情若拿掉，你的申請還剩下什麼？"
+      ],
+      "strongAnswer": "細節可核對，也敢標出不確定或寫得較滿的地方；不把整份備審重新念一遍。",
+      "weakTraps": [
+        "換一個更大的成就來迴避細節",
+        "數字與角色一追問就改",
+        "說備審都是老師叫我這樣寫的"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立成功大學醫學系",
+          "year": "年份未標明",
+          "url": "https://www.tkbgo.com.tw/schoolZone/university/article/toDetail?article_id=1861"
+        }
+      ]
+    },
+    {
+      "id": "q021",
+      "category": "學習歷程延伸",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "你最近一次查證一則醫學或健康新知時，步驟是什麼？生成式工具若有用到，它放在哪一步，哪一步一定不能交給它？",
+      "scenario": null,
+      "followUps": [
+        "兩篇文章結論相反時，你先看什麼？",
+        "你如何發現自己查到的是廣告或轉載？",
+        "請用非專業的話，說明你最後相信或不相信的理由。"
+      ],
+      "strongAnswer": "有實際的查證順序，知道原始資料、日期與利益衝突；生成式工具被放在整理或起草，而不是最終證據。",
+      "weakTraps": [
+        "說我都問聊天機器人，它說的應該有根據",
+        "只回答會用搜尋引擎，沒有一次真實的查證",
+        "用很多資料庫名稱裝熟，卻說不出自己看過哪一篇"
+      ],
+      "inspiredBy": [
+        {
+          "school": "中山醫學大學醫學系",
+          "year": "114學年度",
+          "url": "https://www.dcard.tw/f/freshman/p/261806543"
+        }
+      ]
+    },
+    {
+      "id": "q022",
+      "category": "學習歷程延伸",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "在服務、家教或照顧家人時，你有沒有把對方看成一個待完成的任務？後來你怎麼發現，又改了哪一個動作？",
+      "scenario": null,
+      "followUps": [
+        "對方若無法清楚表達，你要改的是什麼？",
+        "這次經驗沒有讓你更想讀醫，也可以。它實際改變了你什麼？",
+        "你現在還會在什麼情況下把人當成任務？"
+      ],
+      "strongAnswer": "承認自己曾簡化別人，並指出一個具體的行為改變；不把這段經歷昇華成已經具備醫病溝通能力。",
+      "weakTraps": [
+        "否認自己會把人當任務",
+        "用這段故事證明自己很有愛心",
+        "沒有任何一個改過的動作"
+      ],
+      "inspiredBy": [
+        {
+          "school": "馬偕醫學大學醫學系",
+          "year": "113學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1716208070.A.5DB.html"
+        },
+        {
+          "school": "臺北醫學大學醫學系",
+          "year": "106學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1497392565.A.F09.html"
+        }
+      ]
+    },
+    {
+      "id": "q023",
+      "category": "學習歷程延伸",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "請說明你在一次專題、科展或報告中實際負責的那一段。若重做，你會改分析或分工的哪一個點？",
+      "scenario": null,
+      "followUps": [
+        "資料是誰蒐集的？你如何知道沒有人改過方便的數字？",
+        "組員和你意見不同時，最後採用誰的版本，為什麼？",
+        "評審或老師若問一個你沒做的部分，你會怎麼回答？"
+      ],
+      "strongAnswer": "角色邊界清楚，改動的點具體；不會的部分直接承認，不把整組的工作講成自己的。",
+      "weakTraps": [
+        "只講主題很有意義，不講自己做了什麼",
+        "重做時只說我會更努力",
+        "被問到別人負責的部分仍假裝懂"
+      ],
+      "inspiredBy": [
+        {
+          "school": "中山醫學大學醫學系",
+          "year": "114學年度",
+          "url": "https://www.dcard.tw/f/freshman/p/261806543"
+        },
+        {
+          "school": "長庚大學醫學系",
+          "year": "113學年度",
+          "url": "https://www.tkbgo.com.tw/schoolZone/university/article/toDetail?article_id=2387"
+        }
+      ]
+    },
+    {
+      "id": "q024",
+      "category": "學習歷程延伸",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "若家人在醫療機構工作，或你從小常進出醫院，請說明你的動機哪一部分來自這條路，哪一部分是你自己後來驗證過的。",
+      "scenario": null,
+      "followUps": [
+        "家人期待你讀醫的句子，你記得哪一句？你同意嗎？",
+        "你見過醫療工作不漂亮的一面嗎？那次之後你的想法有沒有動？",
+        "若家人反對你讀醫，你的理由還剩下什麼？"
+      ],
+      "strongAnswer": "不否認家庭路徑，也能指出自己觀察、閱讀或實作過的部分；對家人的說法有同意也有保留。",
+      "weakTraps": [
+        "因為家人是醫師所以我很了解醫療",
+        "完全切割家庭影響，說一切都是自己的志業",
+        "把家人的職稱當成自己的經歷"
+      ],
+      "inspiredBy": [
+        {
+          "school": "中山醫學大學醫學系",
+          "year": "106學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1497392565.A.F09.html"
+        },
+        {
+          "school": "長庚大學醫學系",
+          "year": "113學年度",
+          "url": "https://www.tkbgo.com.tw/schoolZone/university/article/toDetail?article_id=2387"
+        }
+      ]
+    },
+    {
+      "id": "q025",
+      "category": "學習歷程延伸",
+      "format": "traditional",
+      "difficulty": "easy",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "若你重考、轉軌，或曾經把申請放在別的科系，請說明那一段時間你具體改變的一個讀法、習慣或判斷。不要只說你變得更努力。",
+      "scenario": null,
+      "followUps": [
+        "你如何判斷上一次失敗是方法問題，而不是只差一點運氣？",
+        "重考期間你放棄了什麼？那個放棄現在還合理嗎？",
+        "若今年再次沒有錄取，你已經想過的下一步是什麼？"
+      ],
+      "strongAnswer": "有一個可觀察的改變，並對失敗的原因有超過運氣的解釋；下一步不是空的再戰一年。",
+      "weakTraps": [
+        "只說更努力、更有決心",
+        "把重考講成悲情，沒有方法",
+        "否認落榜或轉換對自己的影響"
+      ],
+      "inspiredBy": [
+        {
+          "school": "臺北醫學大學醫學系",
+          "year": "106學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1497392565.A.F09.html"
+        },
+        {
+          "school": "中山醫學大學醫學系",
+          "year": "108學年度",
+          "url": "https://www.rulin.com.tw/file/109lae/109lae-2f001.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q026",
+      "category": "醫學倫理",
+      "format": "mmi",
+      "difficulty": "hard",
+      "readingSeconds": 70,
+      "answerSeconds": 300,
+      "prompt": "醫師可以拒絕病人的哪些要求？請畫出你心中的界線：什麼情況應該拒絕，什麼情況拒絕會變成放棄病人。",
+      "scenario": "病人或家屬的要求可能包含：不符合適應症的檢查、立即但不安全的處置、只治療某一些人，或在你已經超時且判斷力下降時仍要求你親自完成。",
+      "followUps": [
+        "若拒絕會讓病人去找一個更不安全的方式，你還拒絕嗎？",
+        "你會怎麼把拒絕說完，而不是只說規定不行？",
+        "同事都答應了，只有你覺得不該做。你怎麼處理？"
+      ],
+      "strongAnswer": "界線同時包含病人安全、適應症、公平與自己的能力狀態；拒絕時仍有說明、轉介或替代，而不是情緒性的不救。",
+      "weakTraps": [
+        "醫師應該有求必應，或醫師可以依喜好選病人",
+        "只引用規定，不談怎麼對病人說",
+        "把疲勞當成永遠可以忽略的因素"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立臺灣大學醫學系",
+          "year": "108學年度",
+          "url": "https://www.rulin.com.tw/file/109lae/109lae-2f001.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q027",
+      "category": "醫學倫理",
+      "format": "mmi",
+      "difficulty": "hard",
+      "readingSeconds": 60,
+      "answerSeconds": 300,
+      "prompt": "有人主張要傾一切可用資源搶救一位病人。你在什麼條件下同意，在什麼條件下不同意？",
+      "scenario": "資源包括加護病床、血液製品與一個已經連續工作很久的團隊。同一時段還有其他不那麼被看見的病人在等。",
+      "followUps": [
+        "若這位病人是公眾人物，你的條件會變嗎？",
+        "家屬願意自費，是否就能使用原本要分給別人的稀少資源？",
+        "你要怎樣避免用社會貢獻來決定誰值得被救？"
+      ],
+      "strongAnswer": "承認搶救的價值，也承認機會成本；條件具體（可逆性、預後證據、是否有替代），且不依身分加減。",
+      "weakTraps": [
+        "一律搶救到底才叫有醫德",
+        "一律以成本拒絕，不談個別預後",
+        "用病人的社會地位決定資源"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立臺灣大學醫學系",
+          "year": "108學年度",
+          "url": "https://www.rulin.com.tw/file/109lae/109lae-2f001.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q028",
+      "category": "醫學倫理",
+      "format": "mmi",
+      "difficulty": "hard",
+      "readingSeconds": 80,
+      "answerSeconds": 300,
+      "prompt": "一位成年人知道自己有可能遺傳給子女的疾病。子女都即將結婚。站在這位家長的位置，你會不會主動要求子女去做篩檢？",
+      "scenario": "早期知道病情可能改變追蹤方式，但沒有簡單的治癒方法。篩檢結果可能影響婚嫁、保險與家庭關係。子女都已成年，家長尚未告訴他們這個診斷。",
+      "followUps": [
+        "若子女明示不想知道，家長還有沒有權利說下去？",
+        "未來的配偶應不應該在結婚前知道？誰來告訴？",
+        "若你是醫師而不是家長，你的義務有什麼不同？"
+      ],
+      "strongAnswer": "分開家長的擔憂、成年子女的知情選擇，以及尚未存在的配偶；不把篩檢說成只有好處，並區分家人與醫師的角色。",
+      "weakTraps": [
+        "為了家庭和諧而隱瞞，或為了負責而強制篩檢",
+        "沒有注意到子女已經成年",
+        "把醫師和家長的義務混成同一個人"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立陽明交通大學醫學系",
+          "year": "年份未標明",
+          "url": "https://www.reallygood.com.tw/winner/inside?print_id=10635&str=04837BACD7AF71C6FE4A5017D0E26901"
+        }
+      ]
+    },
+    {
+      "id": "q029",
+      "category": "醫學倫理",
+      "format": "mmi",
+      "difficulty": "hard",
+      "readingSeconds": 90,
+      "answerSeconds": 360,
+      "prompt": "家中青少年罹患一種需要吻合捐贈才能提高存活機會的血液疾病，現有資料庫沒有適合的人。父母考慮再懷孕，希望新生兒有機會成為捐贈者。請分別從父母、患病少年、未來的新生兒三個位置說話，最後才說你自己的判斷。",
+      "scenario": "再懷孕有年齡與醫療風險。新生兒即使出生，也不保證吻合，更不保證日後能理解自己為什麼被生下來。患病的少年聽得懂這些討論。",
+      "followUps": [
+        "若少年自己反對父母再懷孕，誰的意見權重最高？",
+        "新生兒長大後拒絕捐贈，家庭應如何看待當初的決定？",
+        "醫療技術做得到，是否等於應該做？"
+      ],
+      "strongAnswer": "三個位置都有獨立的理由，不是同一段話換主詞；自己的判斷出現在最後，並承認新生兒無法在當下同意。",
+      "weakTraps": [
+        "只從救現有孩子出發，新生兒沒有位置",
+        "用自然或宗教口號直接否決，沒有進入三方",
+        "給出一個家庭幸福的結局來逃過衝突"
+      ],
+      "inspiredBy": [
+        {
+          "school": "臺北醫學大學醫學系",
+          "year": "106學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1497392565.A.F09.html"
+        }
+      ]
+    },
+    {
+      "id": "q030",
+      "category": "醫學倫理",
+      "format": "mmi",
+      "difficulty": "hard",
+      "readingSeconds": 70,
+      "answerSeconds": 300,
+      "prompt": "活體器官捐給親人通常沒有報酬，捐贈者卻承擔手術風險。這樣算公平嗎？親人開口時，被請求的人可以拒絕嗎？",
+      "scenario": "法律禁止器官買賣。家庭裡的經濟與情感壓力不一定會被寫進同意書。醫療團隊需要確認同意是自願的。",
+      "followUps": [
+        "若給一筆補償，你擔心它解決什麼、製造什麼？",
+        "醫師若懷疑這個人是被家族壓力帶來的，可以做什麼？",
+        "拒絕捐給父母之後，這個人還算不算一個好人？你為什麼這樣定義？"
+      ],
+      "strongAnswer": "分開禁止買賣、合理補償與情感脅迫；肯定拒絕的權利，並說明醫療團隊如何確認自願，而不是只做道德評判。",
+      "weakTraps": [
+        "孝順就不能拒絕",
+        "一有補償就等於買賣，或補償就能解決公平",
+        "沒有看到同意書以外的壓力"
+      ],
+      "inspiredBy": [
+        {
+          "school": "臺北醫學大學醫學系",
+          "year": "109學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1588650243.A.7A9.html"
+        }
+      ]
+    },
+    {
+      "id": "q031",
+      "category": "醫學倫理",
+      "format": "mmi",
+      "difficulty": "hard",
+      "readingSeconds": 90,
+      "answerSeconds": 360,
+      "prompt": "高齡病人意識清楚，醫師建議侵入性的營養與洗腎。住在一起、負責日常照顧的晚輩希望走較緩和的方式；不住在附近的另一位家屬希望積極治療。誰比較有權決定？",
+      "scenario": "病人聽得懂簡單說明，但容易疲倦。兩位家屬都自稱是為病人好。團隊尚未用病人聽得懂的話完整問過他本人。",
+      "followUps": [
+        "這些處置會不會本來就不符合病人的利益？你還缺什麼資訊？",
+        "若病人之後意識不清楚，決定的程序應怎麼改？",
+        "主要照顧者的負擔，可以成為選擇治療的理由嗎？"
+      ],
+      "strongAnswer": "意識清楚時以本人為主；兩位家屬都被聽見但不取代本人；分開討論負擔、生活品質，以及意識改變後的程序。",
+      "weakTraps": [
+        "誰付出較多照顧就聽誰的",
+        "高齡就應該或就不應該積極治療",
+        "沒有先問病人本人"
+      ],
+      "inspiredBy": [
+        {
+          "school": "中山醫學大學醫學系",
+          "year": "114學年度",
+          "url": "https://www.dcard.tw/f/freshman/p/261806543"
+        }
+      ]
+    },
+    {
+      "id": "q032",
+      "category": "醫學倫理",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 60,
+      "answerSeconds": 300,
+      "prompt": "災後你已連續工作超過一天，而且開始出現失誤。眼前還有傷者。你會留下，還是先離開去休息？請一併說明你要如何避免病人在你離開或留下時更不安全。",
+      "scenario": "現場還有其他醫療人員，但每個人都很累。你沒有被正式要求硬撐，也沒有人主動來換你。",
+      "followUps": [
+        "若沒有人能接，你的決定會改嗎？",
+        "年輕醫療人員應在什麼時間點求救，而不是等犯錯？",
+        "把休息說成自私的文化，可能會造成什麼樣的病人傷害？"
+      ],
+      "strongAnswer": "病人安全與疲勞被放在一起；有交接、求救或縮小自己責任範圍的具體做法，而不是只選英雄或逃開。",
+      "weakTraps": [
+        "有醫德就必須留下",
+        "一旦累了就立刻離開，不交代傷者",
+        "只談自己的感受，沒有現場病人"
+      ],
+      "inspiredBy": [
+        {
+          "school": "高雄醫學大學醫學系",
+          "year": "114學年度",
+          "url": "https://www.dcard.tw/f/freshman/p/261806560"
+        }
+      ]
+    },
+    {
+      "id": "q033",
+      "category": "醫學倫理",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 60,
+      "answerSeconds": 300,
+      "prompt": "朋友因為重病缺了很多課，期末請你在考試中協助他作弊。請分別以朋友、被請求的你、以及老師的位置說你會怎麼做。",
+      "scenario": "朋友的病情是真的，學校並非完全沒有補考或調整評量的管道，但他覺得那些管道太慢，也怕被當掉。",
+      "followUps": [
+        "若你拒絕，你要怎麼講才不會像是在道德教訓他？",
+        "協助作弊若被你說成講義氣，以後病人資料也可以通融嗎？",
+        "老師若也想幫忙，界線應該畫在哪裡？"
+      ],
+      "strongAnswer": "承認病情與學業壓力，同時不把作弊說成唯一的幫忙；三個角色的做法不同，並找得到正當的補考或支援。",
+      "weakTraps": [
+        "講義氣就幫忙，或完全不理生病的朋友",
+        "三個角色講出同一句我選擇誠實",
+        "沒有任何替代的協助方式"
+      ],
+      "inspiredBy": [
+        {
+          "school": "中國醫藥大學醫學系",
+          "year": "109學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1588243034.A.893.html"
+        },
+        {
+          "school": "輔仁大學醫學系",
+          "year": "年份未標明",
+          "url": "https://university.1111.com.tw/zone/university/discussTopic.asp?cat=University&id=349662"
+        }
+      ]
+    },
+    {
+      "id": "q034",
+      "category": "醫學倫理",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 70,
+      "answerSeconds": 300,
+      "prompt": "有的國家採器官捐贈默許：沒有事先拒絕，就視為願意捐贈。你認為台灣應不應該走向這個制度？",
+      "scenario": "支持者認為可以縮短等待；反對者擔心家人在悲傷時無法接受，以及社會信任不足時，默許會變成沒有真正知情。",
+      "followUps": [
+        "家屬反對、本人沒有表示，你聽誰的？",
+        "如何讓拒絕的管道真的做得到，而不是寫在沒人看的網頁？",
+        "什麼證據會讓你從贊成改成反對，或反過來？"
+      ],
+      "strongAnswer": "談知情、拒絕權、家屬角色與等待名單，而不是只說器官很缺所以應該默許；有一個會讓自己改立場的條件。",
+      "weakTraps": [
+        "因為缺器官就認為反對的人不道德",
+        "因為傳統觀念就結束討論",
+        "沒有提到人要如何真的知道這個制度"
+      ],
+      "inspiredBy": [
+        {
+          "school": "輔仁大學醫學系",
+          "year": "110學年度",
+          "url": "https://www.jobforum.tw/discussTopic.asp?id=242037"
+        },
+        {
+          "school": "中山醫學大學醫學系",
+          "year": "年份未標明",
+          "url": "https://tkbreallygood.pixnet.net/blog/posts/14215408040"
+        }
+      ]
+    },
+    {
+      "id": "q035",
+      "category": "自我認識",
+      "format": "traditional",
+      "difficulty": "easy",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "醫師工作裡，有哪一面是你不喜歡、甚至會想避開的？你準備怎麼面對它，而不是假裝它不存在？",
+      "scenario": null,
+      "followUps": [
+        "這個不喜歡，是來自經驗、觀察，還是想像？",
+        "若它每週都會出現，你的面對方法還用得了嗎？",
+        "你喜歡的那一面，有沒有可能只是外人看到的部分？"
+      ],
+      "strongAnswer": "說得出一個具體的不適（例如不確定、衝突、夜間工作、情緒負荷），並有現實的面對方式，而不是把缺點講成優點。",
+      "weakTraps": [
+        "我沒有不喜歡的部分",
+        "把缺點說成我太要求完美",
+        "用我會犧牲奉獻蓋過不喜歡"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立陽明交通大學醫學系",
+          "year": "108學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1555311796.A.D79.html"
+        }
+      ]
+    },
+    {
+      "id": "q036",
+      "category": "自我認識",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "請講一次你必須把壞消息或不中聽的話告訴別人的經驗。你當時怎麼說，事後覺得哪一句不該那樣講？",
+      "scenario": null,
+      "followUps": [
+        "對方的反應和你預期的差在哪裡？",
+        "若時間只夠講三分鐘，你會留下哪一句、拿掉哪一句？",
+        "你覺得面試官出這種題，可能是在看什麼？"
+      ],
+      "strongAnswer": "有真實對話的句子，包含自己說得不好的地方；看得到對方的感受，而不是只證明自己很誠實。",
+      "weakTraps": [
+        "我沒有這種經驗",
+        "全程都在稱讚自己很會溝通",
+        "壞消息被講成一個成功的勸說"
+      ],
+      "inspiredBy": [
+        {
+          "school": "高雄醫學大學醫學系",
+          "year": "105學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1461855562.A.0F5.html"
+        }
+      ]
+    },
+    {
+      "id": "q037",
+      "category": "自我認識",
+      "format": "traditional",
+      "difficulty": "easy",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "請講一個你發現自己有盲點的挫折。重點不是最後成功了沒有，而是你原先漏看了什麼。",
+      "scenario": null,
+      "followUps": [
+        "是誰或什麼資料讓你發現自己漏了？你當時接不接受？",
+        "這個盲點若出現在團隊作業裡，別人會怎麼受苦？",
+        "你現在用什麼方法檢查自己是不是又漏了？"
+      ],
+      "strongAnswer": "盲點具體，發現的過程具體；不急著把故事收成我因此更強。",
+      "weakTraps": [
+        "挫折只是比賽拿不到名次，沒有盲點",
+        "最後一句一定是感謝挫折",
+        "責任都在別人"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立成功大學醫學系",
+          "year": "108學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1555257848.A.DA1.html"
+        },
+        {
+          "school": "長庚大學醫學系",
+          "year": "113學年度",
+          "url": "https://www.tkbgo.com.tw/schoolZone/university/article/toDetail?article_id=2387"
+        }
+      ]
+    },
+    {
+      "id": "q038",
+      "category": "自我認識",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "你現在的紓壓方式是什麼？它在課業更重、睡眠更少、不能隨時離開現場時，還用得上嗎？",
+      "scenario": null,
+      "followUps": [
+        "若紓壓方式會傷害身體或人際，你準備換掉哪一部分？",
+        "你怎麼知道自己已經超過負荷，而不是還能再撐？",
+        "向別人求救，對你來說難在哪裡？"
+      ],
+      "strongAnswer": "方式具體，並誠實評估它在醫院工時下會失效的部分；有早期的過載訊號。",
+      "weakTraps": [
+        "我抗壓性很好，不需要方法",
+        "只列運動、聽音樂，沒想過做不到的時候",
+        "把硬撐說成優點"
+      ],
+      "inspiredBy": [
+        {
+          "school": "長庚大學醫學系",
+          "year": "108學年度",
+          "url": "https://www.rulin.com.tw/file/109lae/109lae-2f001.pdf"
+        },
+        {
+          "school": "中山醫學大學醫學系",
+          "year": "114學年度",
+          "url": "https://www.dcard.tw/f/freshman/p/261806543"
+        }
+      ]
+    },
+    {
+      "id": "q039",
+      "category": "自我認識",
+      "format": "traditional",
+      "difficulty": "easy",
+      "readingSeconds": 0,
+      "answerSeconds": 120,
+      "prompt": "請說一個優點和一個缺點。缺點必須是可能影響你和病人或同學共事的，而不是無傷大雅的生活習慣。",
+      "scenario": null,
+      "followUps": [
+        "這個缺點最近一次造成什麼後果？",
+        "你的優點在什麼情況下會變成缺點？",
+        "同學若用三個字形容你，你猜他們不會說哪句你剛剛講的話？"
+      ],
+      "strongAnswer": "缺點有後果、有場景；優點不被用來取消缺點。",
+      "weakTraps": [
+        "缺點是太認真、太在乎別人",
+        "優點背成領導、負責、同理三連",
+        "缺點完全和未來工作無關，用來躲避"
+      ],
+      "inspiredBy": [
+        {
+          "school": "輔仁大學醫學系",
+          "year": "年份未標明",
+          "url": "https://university.1111.com.tw/zone/university/discussTopic.asp?cat=University&id=349662"
+        }
+      ]
+    },
+    {
+      "id": "q040",
+      "category": "自我認識",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "你認為一位對病人有幫助的醫師需要什麼能力？請只用你自己做過的一件小事來對照，不要列形容詞。",
+      "scenario": null,
+      "followUps": [
+        "這件小事和真正的臨床工作差在哪裡？你不該誇大的是哪一句？",
+        "技術很強但溝通很差的人，你會怎麼描述他的限制？",
+        "你現在最缺的能力，要靠什麼樣的練習而不是靠性格？"
+      ],
+      "strongAnswer": "能力從一件小事裡長出來，並主動說出這件小事不能等同於臨床能力。",
+      "weakTraps": [
+        "有愛心、有耐心、有責任感的清單",
+        "用偉人或戲劇裡的醫師代替自己的例子",
+        "把高中經歷說成已經具備醫師能力"
+      ],
+      "inspiredBy": [
+        {
+          "school": "中山醫學大學醫學系",
+          "year": "114學年度",
+          "url": "https://www.dcard.tw/f/freshman/p/261806543"
+        },
+        {
+          "school": "輔仁大學醫學系",
+          "year": "年份未標明",
+          "url": "https://university.1111.com.tw/zone/university/discussTopic.asp?cat=University&id=349662"
+        }
+      ]
+    },
+    {
+      "id": "q041",
+      "category": "自我認識",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "獨處和孤立不太一樣。請用你自己的經驗說明兩者，並談談若未來工作時間長、很難隨時找人說話，你會怎麼安排。",
+      "scenario": null,
+      "followUps": [
+        "你上一次真正一個人把一件事想完，是在做什麼？",
+        "孤立對你來說有什麼早期跡象？",
+        "團隊很忙時，你會不會把自己的孤立誤認為堅強？"
+      ],
+      "strongAnswer": "兩個詞有個人經驗上的差別；對未來值班或長工時的安排具體，不美化孤獨。",
+      "weakTraps": [
+        "背一段關於孤獨的名言，沒有自己的經驗",
+        "說我很獨立所以不需要別人",
+        "把獨處講成品味，完全不談孤立的風險"
+      ],
+      "inspiredBy": [
+        {
+          "school": "中國醫藥大學醫學系",
+          "year": "109學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1588243034.A.893.html"
+        }
+      ]
+    },
+    {
+      "id": "q042",
+      "category": "自我認識",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "請講一次你很生氣或情緒明顯失控的經驗。你當時做了什麼，事情過後你改了哪一個習慣？",
+      "scenario": null,
+      "followUps": [
+        "若當時對面是病人家屬而不是同學，後果會差在哪？",
+        "你有沒有把生氣說成對方的錯，直到現在仍這樣認為？",
+        "什麼樣的道歉是你做過的，什麼樣的只是你想過？"
+      ],
+      "strongAnswer": "情緒事件具體，有行為與事後的習慣改變；不把脾氣重說成很有原則。",
+      "weakTraps": [
+        "我很少生氣，所以沒有例子",
+        "故事的結論是對方果然不對",
+        "只說我後來學會情緒管理，沒有做法"
+      ],
+      "inspiredBy": [
+        {
+          "school": "中山醫學大學醫學系",
+          "year": "114學年度",
+          "url": "https://www.dcard.tw/f/freshman/p/261806543"
+        }
+      ]
+    },
+    {
+      "id": "q043",
+      "category": "動機與志向",
+      "format": "traditional",
+      "difficulty": "easy",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "為什麼是醫學系，而不是藥學、護理、社工、公共衛生或生命科學？請用你想天天做的事來回答，不要用分數落點來回答。",
+      "scenario": null,
+      "followUps": [
+        "這些科系裡，哪一個你其實也會考慮？差的那一點是什麼？",
+        "若醫學系的日常有一大半不是救人成功，你的理由還在嗎？",
+        "你有沒有和做這些工作的人談過？談完哪一句你記得？"
+      ],
+      "strongAnswer": "比較的是日常工作內容與自己的經驗，不是名次或薪水；說得出醫學系特有的責任，也說得出其他科系做得到而自己不想以此為主的事。",
+      "weakTraps": [
+        "因為分數夠、排名最高",
+        "因為想救人，所以其他科系都不算",
+        "對其他科系的描述明顯不了解，只用來墊高醫學系"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立臺灣大學醫學系",
+          "year": "113學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1717072819.A.505.html"
+        }
+      ]
+    },
+    {
+      "id": "q044",
+      "category": "動機與志向",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "想讀醫學系的理由常被分成三類：接觸很多知識、學習解決問題、以及地位與收入等結果。請排序，並說明最後一名為什麼不是你的主要理由。",
+      "scenario": null,
+      "followUps": [
+        "若地位與收入明顯下降，你的第一名還站得住嗎？",
+        "知識若在其他科系也能學到，你為什麼留在醫學系？",
+        "你的排序有多少是你自己的，有多少是你覺得教授想聽的？"
+      ],
+      "strongAnswer": "排序有個人依據；對地位與收入誠實，既不裝成完全不在乎，也不把它當主因；被挑戰時不會整份重排來討好。",
+      "weakTraps": [
+        "把地位與收入排最後，但說不出理由，只為了安全",
+        "三項都說一樣重要",
+        "否認經濟考量在家庭決定裡存在"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立臺灣大學醫學系",
+          "year": "110學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1619424371.A.FE9.html"
+        }
+      ]
+    },
+    {
+      "id": "q045",
+      "category": "動機與志向",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "若這次沒有錄取醫學系，未來三年你會怎麼過？請講一個具體計畫，而不是只說再考一次。",
+      "scenario": null,
+      "followUps": [
+        "再考之外，你會用什麼方式繼續確認自己適合這條路？",
+        "家人若要求你立刻就讀其他科系，你怎麼談？",
+        "三年後若仍然沒有錄取，什麼證據會讓你改方向？"
+      ],
+      "strongAnswer": "有讀書以外的驗證方式或生活安排；再考是選項之一，不是唯一身份。",
+      "weakTraps": [
+        "我一定會再考到上",
+        "沒想過失敗",
+        "用消極或自責填滿三年"
+      ],
+      "inspiredBy": [
+        {
+          "school": "臺北醫學大學醫學系",
+          "year": "106學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1497392565.A.F09.html"
+        },
+        {
+          "school": "國立臺灣大學醫學系",
+          "year": "109學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1591288357.A.D5D.html"
+        }
+      ]
+    },
+    {
+      "id": "q046",
+      "category": "動機與志向",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "這幾年有些產業的起薪與社會關注高過許多人對醫師的想像。你為什麼仍選擇醫學系？請同時回答：若你的選擇裡其實有經濟考量，那是哪一種？",
+      "scenario": null,
+      "followUps": [
+        "你知道住院與訓練階段的生活大概是什麼樣子嗎？訊息從哪來？",
+        "若朋友說你在浪費分數，你怎麼回應才不像在說教？",
+        "經濟穩定對你的家庭有多重要？你如何不讓它變成唯一理由？"
+      ],
+      "strongAnswer": "不假裝經濟與社會評價不存在，但主要理由能獨立於比較薪水；對訓練階段的辛苦有來源，而不是口號。",
+      "weakTraps": [
+        "醫師還是最有前途，所以我選",
+        "我完全不考慮錢，講得像聖人",
+        "用貶低其他產業來抬高醫學"
+      ],
+      "inspiredBy": [
+        {
+          "school": "馬偕醫學大學醫學系",
+          "year": "113學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1716208070.A.5DB.html"
+        }
+      ]
+    },
+    {
+      "id": "q047",
+      "category": "動機與志向",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "公費生通常附帶服務義務，地點與年限不一定能完全自己挑。這對你是接受條件，還是志向的一部分？請說明差別。",
+      "scenario": null,
+      "followUps": [
+        "若服務地點很不方便你的家庭，你還接得下嗎？",
+        "義務結束後你想留下或離開，你現在有什麼根據？",
+        "把公費當成績較好申請的策略，風險是什麼？"
+      ],
+      "strongAnswer": "分得清契約義務與個人志向；對地點、年限與生活限制有具體想像，不把公費只當成錄取管道。",
+      "weakTraps": [
+        "我很有熱忱所以去哪裡都一樣",
+        "沒想過義務，只想先考上",
+        "用服務弱勢的空話取代對契約的理解"
+      ],
+      "inspiredBy": [
+        {
+          "school": "義守大學醫學系",
+          "year": "108學年度",
+          "url": "https://stethoscope.pixnet.net/blog/posts/15289409208"
+        }
+      ]
+    },
+    {
+      "id": "q048",
+      "category": "動機與志向",
+      "format": "traditional",
+      "difficulty": "easy",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "家人的期待大約占你想讀醫學系的多少？請用一個對話或一個決定來說明，你如何分辨哪一部分是他們的，哪一部分是你的。",
+      "scenario": null,
+      "followUps": [
+        "若期待來自你很愛的人，拒絕會不會讓你內疚到改口？",
+        "你有沒有為了符合期待而在備審裡寫過自己不太相信的句子？",
+        "期待若消失，你的日常準備會少做哪一件事？"
+      ],
+      "strongAnswer": "比例或比重有故事支撐；看得到家人的話與自己的核對，不把順從說成志業，也不把獨立說成沒有家人。",
+      "weakTraps": [
+        "百分百是我自己的決定，家人沒有影響",
+        "我讀醫是為了完成父母的心願，講成美德就停住",
+        "用一個感人故事取消後面的追問"
+      ],
+      "inspiredBy": [
+        {
+          "school": "高雄醫學大學醫學系",
+          "year": "教授評論，非單一年題",
+          "url": "https://enews2.kmu.edu.tw/index.php/Enews337_%E5%85%A5%E5%AD%B8%E6%8B%9B%E7%94%9F%E9%9D%A2%E8%AB%87%E8%AB%87%E4%BB%80%E9%BA%BC%3F_%281%29"
+        }
+      ]
+    },
+    {
+      "id": "q049",
+      "category": "動機與志向",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "請講兩件你認為醫師工作裡很普通、但不輕鬆的日常。不要講災難英雄。這些日常有沒有讓你動搖過？",
+      "scenario": null,
+      "followUps": [
+        "這兩件事的訊息來源是什麼？若來源只是影集，你還缺什麼？",
+        "哪一件你可能做得不好？",
+        "若學長說實際比你講的更瑣碎，你要怎麼核對？"
+      ],
+      "strongAnswer": "日常具體（解釋、文書、等待、夜間聯絡、不確定的預後），來源清楚；動搖被承認而不是被講成更加堅定。",
+      "weakTraps": [
+        "只講救人的成就感",
+        "辛苦被一句但我不怕吃苦帶過",
+        "訊息全部來自戲劇或補習班講義，卻講成自己的觀察"
+      ],
+      "inspiredBy": [
+        {
+          "school": "臺北醫學大學醫學系",
+          "year": "教授訪談，非單一年題",
+          "url": "https://ioh.tw/articles/ioharticles-%E5%A4%A7%E5%AD%B8%E5%82%99%E5%AF%A9-%E9%86%AB%E5%AD%B8%E7%B3%BB%E9%9D%A2%E8%A9%A6"
+        }
+      ]
+    },
+    {
+      "id": "q050",
+      "category": "動機與志向",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "你目前比較想走向臨床照顧，還是研究？這個傾向的證據是什麼？什麼新的經驗會讓你改？",
+      "scenario": null,
+      "followUps": [
+        "臨床和研究都要面對失敗。你比較不能接受哪一種失敗？",
+        "若你其實兩個都還沒體驗，你會怎麼在大學前兩年試驗？",
+        "家人或成績若把你推向另一邊，你要如何知道那不是自己的判斷？"
+      ],
+      "strongAnswer": "傾向與證據相稱；沒有經驗就承認，並有一個會改變決定的條件，而不是提前宣告終身志業。",
+      "weakTraps": [
+        "兩個都想做所以不用選",
+        "用很壯麗的研究願景代替現有證據",
+        "說教授想聽臨床就改口臨床"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立成功大學醫學系",
+          "year": "年份未標明",
+          "url": "https://www.tkbgo.com.tw/schoolZone/university/article/toDetail?article_id=1861"
+        }
+      ]
+    },
+    {
+      "id": "q051",
+      "category": "情境/溝通",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 60,
+      "answerSeconds": 300,
+      "prompt": "你和好友都以同一所醫學系為第一志願。你正取，他在備取邊緣，請你放棄錄取好讓他有機會。你會怎麼做？",
+      "scenario": "他的家庭壓力很大，也幫你走過重考。你的家長反對你為了他放棄。其他正取生未必會做同樣的事，所以你一個人放棄，不一定會改變他的結果。",
+      "followUps": [
+        "若立場對調，你會開口請他放棄嗎？",
+        "你如何對他說，才同時保住誠實與友誼？",
+        "家長的反對在你的決定裡占多少？"
+      ],
+      "strongAnswer": "看見友誼、公平、家長與這個動作可能無效；決定有理由，說話方式具體，不把好友說成道德綁架或把自己說成犧牲者。",
+      "weakTraps": [
+        "講義氣就放棄，或不考慮對方感受直接拒絕",
+        "假設自己一放棄朋友就一定錄取",
+        "把家長講成完全不能討論的障礙"
+      ],
+      "inspiredBy": [
+        {
+          "school": "高雄醫學大學醫學系",
+          "year": "108學年度",
+          "url": "https://www.rulin.com.tw/file/109lae/109lae-2f001.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q052",
+      "category": "情境/溝通",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 70,
+      "answerSeconds": 300,
+      "prompt": "門診病人遲到兩分鐘，依現場規則他必須再等數位已報到的人。他不斷懇求下一個就看他。你是現場人員，怎麼處理？",
+      "scenario": "他說接著要去接小孩。後面等待的人裡，也有人請了假、趕著上班。若懇求的人是院長或政治人物的家屬，規則仍寫在牆上。",
+      "followUps": [
+        "若對方是有權勢的家屬，你的說法會改哪一句、哪一句不改？",
+        "若你是那位遲到的人，你會怎麼提出請求才合理？",
+        "規則很硬，但孩子無人接。你能動用的彈性在哪裡，界限在哪裡？"
+      ],
+      "strongAnswer": "先處理情緒與事實，再說明規則對其他等待者的公平；權勢不改變原則，緊急與不便被區分開，必要時找得到現場主管。",
+      "weakTraps": [
+        "有求必應或完全冷處理",
+        "對一般人講規則，對權勢者通融",
+        "和病人爭誰比較可憐"
+      ],
+      "inspiredBy": [
+        {
+          "school": "長庚大學醫學系",
+          "year": "108學年度",
+          "url": "https://www.rulin.com.tw/file/109lae/109lae-2f001.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q053",
+      "category": "情境/溝通",
+      "format": "mmi",
+      "difficulty": "hard",
+      "readingSeconds": 70,
+      "answerSeconds": 360,
+      "prompt": "導師正準備幫你寫推薦信。一位你信任的同學告訴你，她長期被這位導師性騷擾。你會怎麼做？",
+      "scenario": "同學還沒決定要不要進入正式程序，也害怕事情傳開。推薦信的時間點很近。你不是事件的目擊證人。",
+      "followUps": [
+        "你會不會為了推薦信而拖延你本來該做的事？",
+        "在她不同意之前，你可以把這件事告訴誰？",
+        "若你後來發現她說的和事實有出入，你先前的行動應如何保留她的安全？"
+      ],
+      "strongAnswer": "優先考慮同學的安全與她對節奏的同意；推薦信不被當成交換；知道自己不是調查者，並找得到校內或外部的求助管道。",
+      "weakTraps": [
+        "先顧推薦信，以後再說",
+        "未經同意就公開張貼或傳群組",
+        "開始自己調查或質問導師，讓同學更危險",
+        "立刻認定一定是誤會"
+      ],
+      "inspiredBy": [
+        {
+          "school": "馬偕醫學大學醫學系",
+          "year": "113學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1716208070.A.5DB.html"
+        }
+      ]
+    },
+    {
+      "id": "q054",
+      "category": "情境/溝通",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 60,
+      "answerSeconds": 300,
+      "prompt": "你要對平均七十五歲、多數只有小學經驗的長者，說明洗手、口罩與和病人保持距離。你會怎麼安排這十分鐘？",
+      "scenario": "地點是偏鄉活動中心，沒有投影機。有人聽力不好，有人會想提前離開。你不能假設他們會讀你發的講義。",
+      "followUps": [
+        "你如何確認他們是會做，而不只是點頭？",
+        "若有人說這些規定很麻煩、自己身體很好，你怎麼接？",
+        "醫學名詞你會留下哪一個，其餘怎麼換掉？"
+      ],
+      "strongAnswer": "步驟少、可示範、可立即練習；用聽得懂的話，並有方法確認對方做到，而不是把衛教稿念完。",
+      "weakTraps": [
+        "用投影片式的大綱回答現場衛教",
+        "把聽不懂當成長者不配合",
+        "資訊很多，沒有優先順序"
+      ],
+      "inspiredBy": [
+        {
+          "school": "輔仁大學醫學系",
+          "year": "110學年度",
+          "url": "https://www.jobforum.tw/discussTopic.asp?id=242037"
+        }
+      ]
+    },
+    {
+      "id": "q055",
+      "category": "情境/溝通",
+      "format": "mmi",
+      "difficulty": "easy",
+      "readingSeconds": 60,
+      "answerSeconds": 300,
+      "prompt": "家人準備了一桌子菜，其他人臨時不能回來。你一邊吃一邊用手機討論報告，幾乎沒有交談。家人生氣地說：以後叫手機煮給你吃。你會怎麼回應？若你是那位家人，你真正想被聽到的是什麼？",
+      "scenario": "報告明天要交，組員正在等你的回覆。家人今天特地提早回來做飯。",
+      "followUps": [
+        "請舉一個你自己遇過、結構相似的例子。你當時實際說了什麼？",
+        "若你先回完訊息再說話，和先放下手機，差在對方的感受還是只差在禮貌？",
+        "這件事和以後對病人說話有沒有關係？請不要硬扯，沒有就說沒有。"
+      ],
+      "strongAnswer": "先接到情緒，再處理報告的時間；換位時講得出家人要的是被看見而不是被道歉公式打發；自己的例子真實。",
+      "weakTraps": [
+        "只說對不起，然後繼續看手機",
+        "解釋自己很忙，認為家人小題大作",
+        "硬把它昇華成我因此懂得醫病關係"
+      ],
+      "inspiredBy": [
+        {
+          "school": "中國醫藥大學醫學系",
+          "year": "109學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1588243034.A.893.html"
+        }
+      ]
+    },
+    {
+      "id": "q056",
+      "category": "情境/溝通",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 50,
+      "answerSeconds": 300,
+      "prompt": "地震時你被困在電梯裡，手機還能對外聯絡。請按順序說出你前三個行動，以及你不會先做的一件事。",
+      "scenario": "電梯裡還有一位陌生人，腿部疼痛，但意識清楚。你不確定外面的災情，也不知道救援多久會到。",
+      "followUps": [
+        "若對方恐慌、一直想撬門，你怎麼說？",
+        "電量只夠再打一通電話，你打給誰、講哪三個資訊？",
+        "若你是在去面試的路上因地震停駛，你會如何取捨準時與安全？"
+      ],
+      "strongAnswer": "順序裡有安全、資訊與同伴；說得出不該做的事（例如盲目撬門）；電話內容具體。",
+      "weakTraps": [
+        "先發文求救或先擔心面試遲到",
+        "一連串英雄行動，沒有順序",
+        "忽略電梯裡的另一個人"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立成功大學醫學系",
+          "year": "年份未標明",
+          "url": "https://www.tkbgo.com.tw/schoolZone/university/article/toDetail?article_id=1861"
+        }
+      ]
+    },
+    {
+      "id": "q057",
+      "category": "情境/溝通",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 60,
+      "answerSeconds": 300,
+      "prompt": "路旁發生事故，你在能力範圍內幫忙一位受傷的人。家屬趕到時，誤以為你是造成事故的人，並對你生氣。你會怎麼做？",
+      "scenario": "傷者仍需要持續的基本保護，救護車還沒到。你不是執業醫師，四周開始有人拿手機拍攝。",
+      "followUps": [
+        "你會繼續手上的動作，還是先澄清身份？如何同時做？",
+        "拍攝的人要求你解釋，你說什麼、不說什麼？",
+        "事後若被要求留下資料，你擔心什麼、仍願意做什麼？"
+      ],
+      "strongAnswer": "先顧傷者安全，再用短句澄清；不和家屬對罵，也不在鏡頭前講超過自己知道的判斷。",
+      "weakTraps": [
+        "為了自保立刻離開傷者",
+        "和家屬爭辯誰對誰錯",
+        "開始做超出自己能力的醫療處置以證明清白"
+      ],
+      "inspiredBy": [
+        {
+          "school": "學士後醫學（來源未標校名）",
+          "year": "年份未標明",
+          "url": "https://longmentransfer.blogspot.com/2024/07/pbm-interview.html"
+        }
+      ]
+    },
+    {
+      "id": "q058",
+      "category": "情境/溝通",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 70,
+      "answerSeconds": 300,
+      "prompt": "長輩骨折後行動不便。同住的晚輩都要上班，請不起額外人手，長輩也不願意住到照顧機構。請分別說出支持使用機構、反對使用機構，以及若你是長輩你在意什麼。",
+      "scenario": "回家獨自在家的白天有跌倒風險。機構有職能活動，但長輩覺得那裡是被遺棄。晚輩已經請過幾次假。",
+      "followUps": [
+        "安全和長輩的意願衝突時，你會先補哪一個資訊再決定？",
+        "除了機構與家人請假，還有什麼中間選項？",
+        "你如何避免用為你好來結束對話？"
+      ],
+      "strongAnswer": "三個位置都成立；有中間方案（日間照顧、居家服務、環境調整）；決定前要問的是長輩害怕的具體內容。",
+      "weakTraps": [
+        "孝順就不能考慮機構",
+        "安全優先所以不用再問長輩",
+        "只有兩個極端選項"
+      ],
+      "inspiredBy": [
+        {
+          "school": "中國醫藥大學醫學系",
+          "year": "108學年度",
+          "url": "https://www.rulin.com.tw/file/109lae/109lae-2f001.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q059",
+      "category": "情境/溝通",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 60,
+      "answerSeconds": 300,
+      "prompt": "你是新來的負責人，要推動一個會改變排班的做法。資深同事擔心工時與熟練的舊流程被打亂。請用兩分鐘說服他願意先試一個月。",
+      "scenario": "舊流程不是完全沒有道理。你手邊沒有完美數據，只有一些錯誤與延遲的例子。對方在這個單位的年資遠高於你。",
+      "followUps": [
+        "若他說你沒有資格改，你下一句講什麼？",
+        "試一個月的成功與失敗，你事先如何定義，才不會變成各說各話？",
+        "你會保留舊流程的哪一部分，以表示你聽見了他？"
+      ],
+      "strongAnswer": "先重述對方的擔憂，再提出有期限、有評估方式的試驗；不靠職位壓人，也不討好到沒有改變。",
+      "weakTraps": [
+        "空泛地說這是為了病人好",
+        "指責資深的人守舊",
+        "沒有試行範圍，要求立刻全面接受"
+      ],
+      "inspiredBy": [
+        {
+          "school": "馬偕醫學大學醫學系",
+          "year": "111學年度",
+          "url": "https://home.gamer.com.tw/artwork.php?sn=5471349"
+        }
+      ]
+    },
+    {
+      "id": "q060",
+      "category": "團隊合作",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 60,
+      "answerSeconds": 300,
+      "prompt": "學校指定你們四人做科展，一位同學課後與假日幾乎都缺席，截稿在即，成績一起計算。你會怎麼做？",
+      "scenario": "你還不確定他是忙碌、不會做，還是不願意做。其他兩位已經在抱怨，並提議把他的名字拿掉。",
+      "followUps": [
+        "在還不知道原因之前，你不該先做哪一句話？",
+        "若他願意做但只剩很少時間，你如何重分工作才公平？",
+        "拿掉名字可以解決什麼，又會破壞什麼？"
+      ],
+      "strongAnswer": "先弄清原因，再調整分工與期限；對其他組員的不滿有回應，但不在弄清事實前公開懲罰。",
+      "weakTraps": [
+        "直接當成不負責任並開除",
+        "自己全部做完，事後再抱怨",
+        "為了和氣完全不談，讓其他人承擔"
+      ],
+      "inspiredBy": [
+        {
+          "school": "高雄醫學大學醫學系",
+          "year": "114學年度",
+          "url": "https://www.dcard.tw/f/freshman/p/261806560"
+        }
+      ]
+    },
+    {
+      "id": "q061",
+      "category": "團隊合作",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 60,
+      "answerSeconds": 300,
+      "prompt": "你是活動總務，經費不夠。總召常常當眾為難組員，組員開始不願意開會。你要怎麼跟總召談，又怎麼跟組員談？",
+      "scenario": "活動日期不能改。有些花費是總召臨時加的，沒有先問總務。組員私下來找你，不希望你把他們的原話帶回去。",
+      "followUps": [
+        "你會如何描述行為，而不是貼總召的人格標籤？",
+        "組員要求匿名時，你還能轉述什麼？",
+        "經費與人際，你先處理哪一個？若只夠做一件，你選哪件？"
+      ],
+      "strongAnswer": "兩段談話對象不同、內容不同；回饋具體，守住匿名；經費問題有可砍的項目，而不是只叫大家團結。",
+      "weakTraps": [
+        "叫組員忍一忍，活動比較重要",
+        "當眾挑戰總召，讓衝突更大",
+        "只處理經費，假裝人際會自己好"
+      ],
+      "inspiredBy": [
+        {
+          "school": "中國醫藥大學醫學系",
+          "year": "108學年度",
+          "url": "https://www.rulin.com.tw/file/109lae/109lae-2f001.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q062",
+      "category": "團隊合作",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 50,
+      "answerSeconds": 300,
+      "prompt": "你是分組報告的組長。一位組員一再遲交，或交出明顯敷衍的內容，其他組員很不滿。請把現在這段話當成你在路上遇到他時會說的話。",
+      "scenario": "報告合在一起計分，時間只剩數週。你不確定他是不會、太忙，還是覺得題目不重要。",
+      "followUps": [
+        "若他回你：那就你自己做，你下一句是什麼？",
+        "請換一個對象：你會怎麼跟其他組員說明你和他談過之後的決定？",
+        "什麼情況下你會請老師介入？什麼情況下不會？"
+      ],
+      "strongAnswer": "對話先描述具體行為與影響，留空間聽原因，並提出做得到的下一步；對其他組員不煽動。",
+      "weakTraps": [
+        "一開口就是大家都很失望你很不負責",
+        "只在背後討論，不和本人說",
+        "立刻上報，沒有自己談過"
+      ],
+      "inspiredBy": [
+        {
+          "school": "慈濟大學醫學系",
+          "year": "109學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1587814187.A.C3C.html"
+        },
+        {
+          "school": "高雄醫學大學醫學系",
+          "year": "105學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1461855562.A.0F5.html"
+        }
+      ]
+    },
+    {
+      "id": "q063",
+      "category": "團隊合作",
+      "format": "mmi",
+      "difficulty": "hard",
+      "readingSeconds": 70,
+      "answerSeconds": 300,
+      "prompt": "你重複檢查後，仍認為自己的實驗結果才合理，但指導老師準備送出其他三位同學一致的結果。你怎麼做？",
+      "scenario": "截稿很近。你的結果若是對的，其他三人可能有同一個你還沒證明的錯誤。若你是錯的，堅持會拖延全組。",
+      "followUps": [
+        "你要老師看的是態度，還是哪一頁紀錄？",
+        "在還沒證明以前，你會不會讓報告同時寫出分歧？",
+        "若最後證明你錯了，你如何面對曾經很堅持的自己？"
+      ],
+      "strongAnswer": "用紀錄和可重複的檢查來談，而不是用誰比較認真；提出不隱瞞分歧的寫法；為自己可能錯誤預留位置。",
+      "weakTraps": [
+        "老師說了就算，不再說話",
+        "指控其他三人作弊，但沒有證據",
+        "把自己的堅持說成科學精神，拒絕再查"
+      ],
+      "inspiredBy": [
+        {
+          "school": "高雄醫學大學醫學系",
+          "year": "114學年度",
+          "url": "https://www.dcard.tw/f/freshman/p/261806560"
+        }
+      ]
+    },
+    {
+      "id": "q064",
+      "category": "團隊合作",
+      "format": "traditional",
+      "difficulty": "easy",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "若你的經歷看起來都很獨立，請講一次你其實聽進了不同意見、並且因此改了做法的經驗。",
+      "scenario": null,
+      "followUps": [
+        "那個意見第一聽你為什麼不舒服？",
+        "你改的是決定，還是只改了說法？",
+        "若團隊裡沒有人敢反對你，你會如何發現？"
+      ],
+      "strongAnswer": "有原本的做法、別人的意見、自己的不舒服與實際的修改；不把合作講成我帶著大家完成。",
+      "weakTraps": [
+        "我通常都是領導者，所以沒有這種經驗",
+        "說我很會聽，卻舉不出改過的決定",
+        "同意別人只是為了避免衝突，做法完全沒變"
+      ],
+      "inspiredBy": [
+        {
+          "school": "中山醫學大學醫學系",
+          "year": "114學年度",
+          "url": "https://www.dcard.tw/f/freshman/p/261806543"
+        }
+      ]
+    },
+    {
+      "id": "q065",
+      "category": "邏輯思辨",
+      "format": "mmi",
+      "difficulty": "hard",
+      "readingSeconds": 60,
+      "answerSeconds": 300,
+      "prompt": "請用你自己的例子區分公平、平等、正義。接著說明：健保的部分負擔比較像你定義裡的哪一個，它可能傷害誰？",
+      "scenario": "不必背政治哲學名詞。若你用錯了詞，可以自己改正。重點是三個詞在你的例子裡不能是同一件事。",
+      "followUps": [
+        "全部的人付一樣的錢，一定比較平等。它一定比較公平嗎？",
+        "為了正義而讓某人付較少，你要如何避免其他人覺得規則不透明？",
+        "你的例子若換成急診，結論會不會不同？"
+      ],
+      "strongAnswer": "三個詞有可分辨的例子；套到部分負擔時說得出它保護與傷害的人，並承認自己的定義可以被修正。",
+      "weakTraps": [
+        "三個詞換句話說同一件事",
+        "直接宣布台灣醫療屬於其中一種，沒有例子",
+        "用很難的名詞結束，沒有自己的定義"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立臺灣大學醫學系",
+          "year": "113學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1717072819.A.505.html"
+        }
+      ]
+    },
+    {
+      "id": "q066",
+      "category": "邏輯思辨",
+      "format": "traditional",
+      "difficulty": "hard",
+      "readingSeconds": 0,
+      "answerSeconds": 180,
+      "prompt": "兩個地區的醫師人數與護理人數配置很不同。其中一區住院天數較長、併發症較多。請說明你不能立刻推出的結論，以及你還需要哪兩項資料。",
+      "scenario": null,
+      "followUps": [
+        "若再告訴你這區的人口較老、轉院較難，你的假說怎麼改？",
+        "人力變多就一定會縮短住院天數嗎？什麼情況下不會？",
+        "你會把病人行為、疾病嚴重度、出院後照顧，放進解釋的哪一層？"
+      ],
+      "strongAnswer": "拒絕單一因果；指出至少兩個替代解釋與還缺的資料；新資訊進來時願意改假說。",
+      "weakTraps": [
+        "人力少所以醫療品質差，講成定論",
+        "歸咎於該區的人不夠努力",
+        "要了更多資料，但說不出這些資料用來排除什麼"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立臺灣大學醫學系",
+          "year": "110學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1619424371.A.FE9.html"
+        }
+      ]
+    },
+    {
+      "id": "q067",
+      "category": "邏輯思辨",
+      "format": "mmi",
+      "difficulty": "hard",
+      "readingSeconds": 80,
+      "answerSeconds": 360,
+      "prompt": "一位研究者測量小鼠對刺激的反應，和另一位研究者的結果相反。後來發現，同一性別的研究者結果較一致，不同性別之間卻不同。請提出一個假說，並說明你會怎麼驗證。",
+      "scenario": "目前只有這個現象，沒有證明原因。可能和氣味、操作方式、紀錄習慣或小鼠本身的分組有關。請不要假装你已經知道標準答案。",
+      "followUps": [
+        "若國外用類似設計得到不同結果，你的假說要怎麼縮小？",
+        "你要如何避免驗證時只找支持自己的資料？",
+        "這個誤差若沒被發現，會讓什麼樣的結論變得不可靠？"
+      ],
+      "strongAnswer": "假說可被推翻，驗證有對照；同時保留其他解釋；承認這不是背誦題。",
+      "weakTraps": [
+        "直接背一個聽過的正確原因，不說明如何驗證",
+        "把現象說成實驗失敗所以沒有討論價值",
+        "假說無法被實驗反駁"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立成功大學醫學系",
+          "year": "年份未標明",
+          "url": "https://www.tkbgo.com.tw/schoolZone/university/article/toDetail?article_id=1861"
+        }
+      ]
+    },
+    {
+      "id": "q068",
+      "category": "邏輯思辨",
+      "format": "mmi",
+      "difficulty": "hard",
+      "readingSeconds": 70,
+      "answerSeconds": 300,
+      "prompt": "一篇報導用動物實驗觀察手機無線訊號的影響。動物出現了一些生理變化。這樣能不能推出手機對人體有害？若由你重做，你會改哪兩個設計？",
+      "scenario": "報導沒有寫暴露時間是否接近人的使用方式，也沒有寫樣本數與動物種類。實驗者與評估結果的可能是同一批人。",
+      "followUps": [
+        "動物有變化，為什麼仍不能直接等於人會生病？",
+        "什麼樣的結果會讓你願意說這個產品應該被限制？",
+        "你自己的設計若預算只夠改一個點，你改哪一個？"
+      ],
+      "strongAnswer": "指出物種、劑量、對照、盲法與樣本的限制；重做的兩個改動對得上這些限制；結論的語氣和證據相稱。",
+      "weakTraps": [
+        "新聞這樣寫就認為有害",
+        "因為是動物實驗就完全不算數",
+        "重做時只說我要做更嚴謹，沒有具體改動"
+      ],
+      "inspiredBy": [
+        {
+          "school": "慈濟大學醫學系",
+          "year": "107學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1524979543.A.667.html"
+        }
+      ]
+    },
+    {
+      "id": "q069",
+      "category": "邏輯思辨",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 180,
+      "prompt": "一則報導標題是「人工智慧將取代醫師」，並列了幾項很有利的例子。在你願意相信或反駁之前，你要先問哪三個問題？",
+      "scenario": null,
+      "followUps": [
+        "若組上有人因此想退出一個使用新工具的專題，你如何談，而不是說他落伍或說他很清醒？",
+        "哪些工作比較可能被工具改變，哪些你認為短期內仍要人負責？",
+        "你自己使用這類工具時，最容易偷懶的一步是什麼？"
+      ],
+      "strongAnswer": "三個問題打到證據、任務範圍與責任歸屬；對害怕的組員有對話，而不是貼標籤。",
+      "weakTraps": [
+        "標題很聳動所以不相信，或很先進所以相信",
+        "回答會或不會被取代，但沒有問題",
+        "把不同意的組員說成阻礙進步"
+      ],
+      "inspiredBy": [
+        {
+          "school": "高雄醫學大學醫學系",
+          "year": "108學年度",
+          "url": "https://www.rulin.com.tw/file/109lae/109lae-2f001.pdf"
+        },
+        {
+          "school": "國立陽明交通大學醫學系",
+          "year": "108學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1555311796.A.D79.html"
+        }
+      ]
+    },
+    {
+      "id": "q070",
+      "category": "邏輯思辨",
+      "format": "mmi",
+      "difficulty": "medium",
+      "readingSeconds": 60,
+      "answerSeconds": 300,
+      "prompt": "不同國家的生育率差很多，台灣落在偏低的一群。請提出兩個不互相排斥的原因，並說明為什麼只發現金可能不夠。",
+      "scenario": "你沒有被給精確數字。請不要編造各國的生育率。可以把原因分成想不想生、生不生得起、生了之後誰照顧。",
+      "followUps": [
+        "低生育率對未來醫療人力與健保的影響，你能確定的是什麼、不能確定的是什麼？",
+        "若政策只對某一種家庭有利，可能漏掉誰？",
+        "你的原因裡，哪一個是你的價值判斷，哪一個才是觀察？"
+      ],
+      "strongAnswer": "原因分層，不編數字；發現金被放進更大的照顧與工作條件裡；分得清事實與價值。",
+      "weakTraps": [
+        "編成精確統計",
+        "歸咎於年輕人不夠負責",
+        "對策只有發錢或只有喊口號"
+      ],
+      "inspiredBy": [
+        {
+          "school": "高雄醫學大學醫學系",
+          "year": "114學年度",
+          "url": "https://www.dcard.tw/f/freshman/p/261806560"
+        }
+      ]
+    },
+    {
+      "id": "q071",
+      "category": "邏輯思辨",
+      "format": "traditional",
+      "difficulty": "medium",
+      "readingSeconds": 0,
+      "answerSeconds": 150,
+      "prompt": "想像一個沒有細菌的世界。請各說一項人們可能因此少掉的風險，以及一項新的或被忽略的問題。",
+      "scenario": null,
+      "followUps": [
+        "人體上的微生物若一起消失，你覺得消化、免疫或環境哪一個先出問題？你的把握有多少？",
+        "沒有細菌是否等於沒有傳染病？為什麼？",
+        "這個想像題要看的若不是生物知識，你覺得它在看什麼？"
+      ],
+      "strongAnswer": "同時看到感染減少與微生物有用的一面；知識不足時語氣保留；不需要背完整微生物學。",
+      "weakTraps": [
+        "沒有細菌就代表世界更健康，講完就停",
+        "用大量不確定的專有名詞裝懂",
+        "說這題和醫學無關所以隨便答"
+      ],
+      "inspiredBy": [
+        {
+          "school": "國立陽明交通大學醫學系",
+          "year": "109學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1588060631.A.99B.html"
+        }
+      ]
+    },
+    {
+      "id": "q072",
+      "category": "邏輯思辨",
+      "format": "mmi",
+      "difficulty": "easy",
+      "readingSeconds": 50,
+      "answerSeconds": 240,
+      "prompt": "賣場把較新的貨補在架子後面，購物的人卻伸手去拿後面、保存期限較長的商品。請不要罵任何一方。說明這個做法為什麼會出現，以及一個改得動的小設計。",
+      "scenario": "員工被要求減少報廢。購物的人希望自己買到的東西可以放比較久。店長用報廢率考核員工。",
+      "followUps": [
+        "若你是員工，你會怎麼跟店長談這個考核？",
+        "若你是購物的人，你會怎麼跟家人解釋為什麼前面的貨也不該被浪費？",
+        "這個小衝突和醫療裡的什麼現象有一點像？沒有像就不要硬比。"
+      ],
+      "strongAnswer": "雙方的誘因都說得通；小設計對得上報廢與消費者資訊（例如標示、補貨方式），不靠道德譴責。",
+      "weakTraps": [
+        "消費者很自私或員工很狡猾",
+        "空泛地說要加強教育",
+        "硬把賣場比喻成醫病關係，比喻不成立仍堅持"
+      ],
+      "inspiredBy": [
+        {
+          "school": "中國醫藥大學醫學系",
+          "year": "109學年度",
+          "url": "https://www.ptt.cc/bbs/SENIORHIGH/M.1588243034.A.893.html"
+        }
+      ]
+    }
+  ]
+}

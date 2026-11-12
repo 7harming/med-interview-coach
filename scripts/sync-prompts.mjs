@@ -1,11 +1,18 @@
 import { readFileSync, writeFileSync } from "node:fs";
 
-const names = ["interviewer", "coach", "transcribe"];
-const body = names
-  .map((name) => {
-    const text = readFileSync(new URL(`../prompts/${name}.md`, import.meta.url), "utf8");
-    return `export const ${name} = ${JSON.stringify(text)};`;
-  })
-  .join("\n\n");
+const root = new URL("../", import.meta.url);
 
-writeFileSync(new URL("../functions/_lib/prompt-texts.js", import.meta.url), `${body}\n`);
+function readText(path) {
+  return readFileSync(new URL(path, root), "utf8");
+}
+
+const names = ["interviewer", "coach", "transcribe"];
+const prompts = names
+  .map((name) => `export const ${name} = ${JSON.stringify(readText(`prompts/${name}.md`))};`)
+  .join("\n\n");
+writeFileSync(new URL("functions/_lib/prompt-texts.js", root), `${prompts}\n`);
+
+const questions = JSON.parse(readText("data/questions.json"));
+const rubric = JSON.parse(readText("data/rubric.json"));
+const data = `export const questions = ${JSON.stringify(questions)};\n\nexport const rubric = ${JSON.stringify(rubric)};\n`;
+writeFileSync(new URL("functions/_lib/data.js", root), data);

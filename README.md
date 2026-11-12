@@ -124,15 +124,15 @@ Cloudflare 打到 `*.pages.dev` 的子請求會改寫 `CF-Connecting-IP`，所�
 - 教練分數不是任何學校的官方給分，也不能用來預測錄取。
 - `gemini-3.8-flash` 的時間戳是模型估計，不是強制對齊。語助詞次數是字面統計。
 
-## 改提示詞
+## 改提示詞或題庫
 
-可讀的提示詞在 `prompts/interviewer.md`、`prompts/coach.md`、`prompts/transcribe.md`。Pages 無法直接打包 Markdown，所以執行：
+可讀的提示詞在 `prompts/`，題庫與尺規在 `data/questions.json`、`data/rubric.json`。Cloudflare 建置用的 Wrangler 3 不能打包 `with { type: "json" }` 或 Markdown，所以執行：
 
 ```bash
 npm run sync-prompts
 ```
 
-會更新 `functions/_lib/prompt-texts.js`。測試會確認兩邊相同。
+會更新 `functions/_lib/prompt-texts.js` 和 `functions/_lib/data.js`。測試會確認它們和原始檔相同。
 
 ## 測試
 

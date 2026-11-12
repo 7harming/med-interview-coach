@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 import { CATEGORIES, publicQuestions, questionBank, rubric } from "../functions/_lib/bank.js";
+import { questions as bundledQuestions, rubric as bundledRubric } from "../functions/_lib/data.js";
 
 const questions = questionBank.questions;
 
@@ -52,6 +54,15 @@ test("public question payload hides probes and model answers", () => {
   assert.equal(payload.includes("strongAnswer"), false);
   assert.equal(payload.includes("weakTraps"), false);
   assert.equal(publicQuestions().questions.length, questions.length);
+});
+
+test("bundled question data matches the JSON files", () => {
+  const questions = JSON.parse(readFileSync(new URL("../data/questions.json", import.meta.url), "utf8"));
+  const rubricFile = JSON.parse(readFileSync(new URL("../data/rubric.json", import.meta.url), "utf8"));
+  assert.deepEqual(bundledQuestions, questions);
+  assert.deepEqual(bundledRubric, rubricFile);
+  assert.equal(questionBank, bundledQuestions);
+  assert.equal(rubric, bundledRubric);
 });
 
 test("rubric has seven scored dimensions with five levels", () => {

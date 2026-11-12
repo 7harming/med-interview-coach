@@ -1,8 +1,6 @@
-import questionFile from "../../data/questions.json" with { type: "json" };
-import rubricFile from "../../data/rubric.json" with { type: "json" };
+import { questions as questionBank, rubric } from "./data.js";
 
-export const questionBank = questionFile;
-export const rubric = rubricFile;
+export { questionBank, rubric };
 
 export const CATEGORIES = [
   "動機與志向",

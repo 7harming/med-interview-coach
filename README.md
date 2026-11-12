@@ -16,11 +16,11 @@ npm test
 npx wrangler pages dev public --port 8788
 ```
 
-打開 `http://127.0.0.1:8788/interview/`。網站根目錄會轉到這裡。沒有設定 `GEMINI_API_KEY` 時是示範模式：文字回答會得到依你打的內容產生的回饋；若送出錄音，逐字稿是預設例句，不是你的聲音。畫面上方會標明這一點。
+打開 `http://127.0.0.1:8788/interview/`。網站根目錄會轉到這裡。沒有設定 `OPENROUTER_API_KEY` 時是示範模式：文字回答會得到依你打的內容產生的回饋；若送出錄音，逐字稿是預設例句，不是你的聲音。畫面上方會標明這一點。
 
-## 接上 Gemini
+## 接上 OpenRouter
 
-金鑰只放在伺服器。瀏覽器看不到。
+金鑰只放在伺服器。瀏覽器看不到。模型呼叫走 OpenRouter 的 OpenAI 相容 Chat Completions：`POST https://openrouter.ai/api/v1/chat/completions`。每個請求帶 `HTTP-Referer: https://drcharming.net` 與 `X-Title: med-interview-coach`。舊的 `GEMINI_API_KEY` 不再使用。
 
 本地：
 
@@ -28,18 +28,36 @@ npx wrangler pages dev public --port 8788
 cp .dev.vars.example .dev.vars
 ```
 
-在 `.dev.vars` 填入 `GEMINI_API_KEY`。不要把這個檔案提交進 git。
+在 `.dev.vars` 填入 `OPENROUTER_API_KEY`。不要把這個檔案提交進 git。
 
-預設模型（可在 `.dev.vars` 或 Cloudflare 環境變數覆寫）：
+預設模型（`wrangler.toml` 的 `[vars]`、`.dev.vars`，或 Cloudflare 的純文字變數都可以覆寫。儀表板若只能新增 secret，不設這兩個變數也會用程式裡的預設）：
 
 | 變數 | 預設 | 用途 |
 | --- | --- | --- |
-| `GEMINI_MODEL` | `gemini-3.8-flash` | 面試官與教練。`thinking_level` 面試官為 low，教練為 medium |
-| `GEMINI_TRANSCRIBE_MODEL` | `gemini-3.8-flash` | 把音檔轉成繁體中文逐字稿，並請模型回傳段落時間 |
+| `OPENROUTER_MODEL` | `google/gemini-3.8-flash` | 面試官與教練。OpenRouter `reasoning.effort` 對應 Gemini `thinkingLevel`：面試官與反思為 low，教練報告為 medium |
+| `OPENROUTER_TRANSCRIBE_MODEL` | `google/gemini-3.8-flash` | 把音檔轉成繁體中文逐字稿，並請模型回傳段落時間 |
 
-`gemini-3.8-flash` 是目前一般可用、可直接吃音檔的模型，因此預設用它轉寫，才能明確要求繁體中文並保留「嗯、那個、就是」。若改成 `gemini-3.5-transcribe`，後端會改走專用轉寫介面與字級時間戳；該模型公開語言表沒有 `zh-TW`（有簡體華語與粵語），不適合當這個產品的預設。
+`google/gemini-3.8-flash` 是 OpenRouter 上目前的 Gemini Flash（[模型頁](https://openrouter.ai/google/gemini-3.8-flash)），接受文字、圖片、音檔、影片與 PDF，只回文字。預設用它轉寫，才能明確要求繁體中文並保留「嗯、那個、就是」。不要改成只做語音轉文字的模型；這條路徑一律是 Chat Completions，不是 Gemini 舊的 Interactions API，也不是 OpenRouter 的 `/audio/transcriptions`。
 
-`GEMINI_MODEL` 與 `GEMINI_TRANSCRIBE_MODEL` 若要覆寫，在 Pages 專案的環境變數設定即可，它們不是密鑰。
+上游等候時間：轉寫 120 秒，面試官與教練 60 秒。用量（`prompt_tokens`、`completion_tokens`、有回傳時的 `cost`）會寫進該次 JSON 的 `usage`，並 `console.log`。OpenRouter 會在每次回應自動附上用量，不需要再送 `usage.include`。
+
+### 音檔格式
+
+瀏覽器的 `MediaRecorder` 在 Chrome 會錄成 `audio/webm;codecs=opus`。後端去掉 codec 參數，把容器標成 `webm`，以 Chat Completions 的內容片段送出：
+
+```json
+{ "type": "input_audio", "input_audio": { "data": "<raw base64>", "format": "webm" } }
+```
+
+`data` 是原始 base64，不是 data URL。依據 [OpenRouter 音檔文件](https://openrouter.ai/docs/guides/overview/multimodal/audio)：
+
+- Responses API（`/api/v1/responses`）的 `format` 只接受 `wav` 與 `mp3`。
+- Chat Completions 接受上游供應商支援的任何格式字串，文件舉例有 `wav`、`mp3`、`aiff`、`aac`、`ogg`、`flac`、`m4a`、`pcm16`、`pcm24`。
+- Gemini 接受 `audio/webm`（也接受 opus、ogg、mp4、wav、aac、flac）。見 [Gemini audio](https://aistudio.google.com/docs/audio)。
+
+因此 webm/opus 原檔直接標成 `webm`，不轉成 wav。三分鐘的 PCM wav 經 base64 會超過目前約 6 MB 的音檔上限。不要把 webm 標成 wav：格式標錯時，模型會忽略音檔內容。
+
+若 OpenRouter 拒絕 `webm` 這個 format 字串，JSON 錯誤的 `detail` 會帶上游 HTTP 狀態與錯誤訊息。那時可改錄它文件裡有舉例、Gemini 也接受的格式：`audio/ogg;codecs=opus`（format `ogg`）或 `audio/mp4`（format `m4a`）。Safari 本來就常錄成 `audio/mp4`。
 
 ## 部署到 Cloudflare Pages
 
@@ -55,9 +73,9 @@ cp .dev.vars.example .dev.vars
 金鑰在儀表板設定，不要寫進 git：
 
 1. 打開該 Pages 專案 → Settings → Variables and Secrets。
-2. 新增加密的 secret，名稱 `GEMINI_API_KEY`，貼上 Gemini 金鑰。Production 要勾。
+2. 新增加密的 secret，名稱 `OPENROUTER_API_KEY`，貼上 OpenRouter 金鑰。Production 要勾。舊的 `GEMINI_API_KEY` 可以刪掉，程式不再讀它。
 3. 再新增一個加密 secret，名稱 `INTERVIEW_PROXY_SECRET`。自己產生一組夠長的隨機字串，Production 要勾。同一個值也要設在 `drcharming.net` 那個 Pages 專案（Oncall-simulation）。兩邊不一致時，反代流量會被算成同一個邊緣 IP。
-4. 可選的純文字變數：`GEMINI_MODEL`、`GEMINI_TRANSCRIBE_MODEL`。
+4. 可選的純文字變數：`OPENROUTER_MODEL`、`OPENROUTER_TRANSCRIBE_MODEL`。沒設時用 `wrangler.toml` 的 `[vars]`，或程式內建的 `google/gemini-3.8-flash`。
 
 可選的速率限制 KV：
 
@@ -111,7 +129,7 @@ Cloudflare 打到 `*.pages.dev` 的子請求會改寫 `CF-Connecting-IP`，所�
 使用者可能是未成年人。
 
 - 音檔與逐字稿只在那一次請求裡處理，用完即丟，不寫入資料庫、檔案或日誌。
-- 有金鑰時，音檔會由後端傳給 Google Gemini，不會由瀏覽器直接呼叫。
+- 有金鑰時，音檔會由後端經 OpenRouter 傳給 Google Gemini，不會由瀏覽器直接呼叫。失敗時回應只帶上游狀態與錯誤訊息，不帶金鑰。
 - 完成的練習紀錄（逐字稿與回饋，不含音檔）只放在這台裝置的 `localStorage`。清除網站資料或按紀錄頁的清除就會刪掉。
 - 請不要在回答裡說出身分證字號、病歷號或其他不必分享的資料。
 
@@ -120,9 +138,10 @@ Cloudflare 打到 `*.pages.dev` 的子請求會改寫 `CF-Connecting-IP`，所�
 - 真實 MMI 一站常常是 5–7 分鐘。這裡每次錄音最長 3 分鐘，畫面上會同時標建議時間與上限。
 - 沒有英文朗讀站、圖片題、生物化學實作、團體討論或演戲關。
 - 題庫約 72 題，團隊合作略高於考古題裡單獨成類的比例，因為很多合作衝突原本被記在情境題。
-- 示範模式的錄音逐字稿不是你的聲音。文字模式的回饋是規則產生的，不是 Gemini。
+- 示範模式的錄音逐字稿不是你的聲音。文字模式的回饋是規則產生的，不是模型。
 - 教練分數不是任何學校的官方給分，也不能用來預測錄取。
-- `gemini-3.8-flash` 的時間戳是模型估計，不是強制對齊。語助詞次數是字面統計。
+- 段落時間是模型估計，不是強制對齊。語助詞次數是字面統計。
+- 反思問題若模型失敗，回應是 `fallback: true` 與備用題，不會把失敗標成 `mock: false` 的正式結果。
 
 ## 改提示詞或題庫
 

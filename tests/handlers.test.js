@@ -24,7 +24,9 @@ test("health and questions advertise mock mode without hidden fields", async () 
   const health = await handleHealth(request("/api/health"), {});
   const healthBody = await health.json();
   assert.equal(healthBody.mock, true);
-  assert.equal(healthBody.model, "gemini-3.8-flash");
+  assert.equal(healthBody.provider, "openrouter");
+  assert.equal(healthBody.model, "google/gemini-3.8-flash");
+  assert.equal(healthBody.transcribeModel, "google/gemini-3.8-flash");
   assert.equal(healthBody.rateLimit, "memory");
   const questions = await handleQuestions(request("/api/questions"), {});
   const bank = await questions.json();

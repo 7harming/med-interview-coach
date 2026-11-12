@@ -1,7 +1,7 @@
 # 複製成 .dev.vars 後填入。不要把真實金鑰提交進 git。
 # wrangler pages dev 會讀取 .dev.vars。
-GEMINI_API_KEY=
-GEMINI_MODEL=gemini-3.8-flash
-GEMINI_TRANSCRIBE_MODEL=gemini-3.8-flash
+OPENROUTER_API_KEY=
+OPENROUTER_MODEL=google/gemini-3.8-flash
+OPENROUTER_TRANSCRIBE_MODEL=google/gemini-3.8-flash
 # 與 drcharming.net 那個 Pages 專案使用同一組隨機字串。留空則只依 CF-Connecting-IP 限流。
 INTERVIEW_PROXY_SECRET=

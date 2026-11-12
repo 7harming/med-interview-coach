@@ -1,5 +1,5 @@
-export const DEFAULT_MODEL = "gemini-3.8-flash";
-export const DEFAULT_TRANSCRIBE_MODEL = "gemini-3.8-flash";
+export const DEFAULT_MODEL = "google/gemini-3.8-flash";
+export const DEFAULT_TRANSCRIBE_MODEL = "google/gemini-3.8-flash";
 
 export const MAX_AUDIO_MS = 180_000;
 export const MIN_AUDIO_MS = 800;

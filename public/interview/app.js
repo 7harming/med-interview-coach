@@ -309,6 +309,7 @@ function reflectView() {
   return el("section", { class: "card stack" }, [
     el("p", { class: "kicker" }, "看回饋之前"),
     el("h1", {}, "先想一句"),
+    session.reflectionFallback ? el("p", { class: "banner" }, "模型沒有成功產生反思問題，下面是備用題。") : null,
     el("p", {}, session.reflectionQuestion),
     el("p", { class: "muted" }, "這不是加考。寫或不寫都可以。教練不會在這裡給提示。"),
     el("textarea", {
@@ -327,7 +328,7 @@ function reflectView() {
 function reportView(report) {
   if (!report) return el("p", {}, [el("a", { href: "#/history" }, "沒有可看的回饋")]);
   return el("section", { class: "stack" }, [
-    report.mock ? el("div", { class: "banner" }, "這份回饋由示範模式在你的裝置這次送出的文字上產生，沒有呼叫 Gemini。") : null,
+    report.mock ? el("div", { class: "banner" }, "這份回饋由示範模式在你的裝置這次送出的文字上產生，沒有呼叫 OpenRouter。") : null,
     el("div", { class: "card" }, [
       el("p", { class: "kicker" }, "練習回饋"),
       el("h1", {}, "教練報告"),
@@ -422,7 +423,7 @@ function privacyView() {
   return el("section", { class: "card stack" }, [
     el("h1", {}, "隱私"),
     el("p", {}, "使用者可能是未成年人。音檔與逐字稿只在產生逐字稿、追問與回饋的那一次請求中處理，處理完即丟棄，不寫入伺服器資料庫、檔案或日誌。"),
-    el("p", {}, "若你送出錄音，音檔會傳到這個網站的後端，再由後端傳給 Google Gemini 做轉寫。示範模式沒有金鑰時，不會把音檔送去辨識。"),
+    el("p", {}, "若你送出錄音，音檔會傳到這個網站的後端，再由後端經 OpenRouter 傳給 Google Gemini 做轉寫。示範模式沒有金鑰時，不會把音檔送去辨識。"),
     el("p", {}, "練習紀錄（逐字稿與回饋，不含音檔）只放在你這台裝置的 localStorage。清除瀏覽器的網站資料，或按紀錄頁的清除，就會刪掉。"),
     el("p", {}, "速率限制若啟用 Cloudflare KV，只保存 IP 的雜湊與次數，不保存回答內容。沒有綁定 KV 時，次數只留在暫時的記憶體。"),
     el("p", {}, "請不要在練習裡說出身分證字號、病歷號或其他不必分享的敏感資料。"),
@@ -431,7 +432,7 @@ function privacyView() {
 
 function mockBanner() {
   if (!state.health?.mock) return null;
-  return el("div", { class: "banner" }, "目前是示範模式：沒有呼叫 Gemini。用文字作答時，回饋會依你打的內容產生；若送出錄音，逐字稿會是預設例句，不是你的聲音。");
+  return el("div", { class: "banner" }, "目前是示範模式：沒有呼叫 OpenRouter。用文字作答時，回饋會依你打的內容產生；若送出錄音，逐字稿會是預設例句，不是你的聲音。");
 }
 
 async function startRecording() {
@@ -446,7 +447,9 @@ async function startRecording() {
     render();
     return;
   }
-  const preferred = ["audio/webm;codecs=opus", "audio/webm", "audio/mp4"];
+  // Chrome records audio/webm;codecs=opus. The server labels that container as
+  // webm for OpenRouter; Gemini accepts audio/webm. ogg/mp4 are fallbacks.
+  const preferred = ["audio/webm;codecs=opus", "audio/webm", "audio/ogg;codecs=opus", "audio/mp4"];
   media.mime = preferred.find((type) => MediaRecorder.isTypeSupported(type)) || "";
   media.chunks = [];
   media.recorder = new MediaRecorder(media.stream, media.mime ? { mimeType: media.mime } : undefined);
@@ -608,9 +611,11 @@ async function beginReflect() {
       items: session.items.map(apiItem),
     });
     session.reflectionQuestion = data.reflectionQuestion;
+    session.reflectionFallback = Boolean(data.fallback);
   } catch (error) {
     session.error = error.message;
     session.reflectionQuestion = "你覺得教授最可能追問你剛才的哪一句？";
+    session.reflectionFallback = true;
   }
   render();
 }
@@ -727,7 +732,10 @@ async function postJson(path, body) {
     body: JSON.stringify(body),
   });
   const data = await readJson(response);
-  if (!response.ok) throw new Error(data.error || "請求失敗");
+  if (!response.ok) {
+    const detail = data.detail ? `（${data.detail}）` : "";
+    throw new Error(`${data.error || "請求失敗"}${detail}`);
+  }
   return data;
 }
 

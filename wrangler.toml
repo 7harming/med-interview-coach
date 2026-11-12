@@ -2,6 +2,10 @@ name = "med-interview-coach"
 compatibility_date = "2026-11-11"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = "public"
+
+[vars]
+OPENROUTER_MODEL = "google/gemini-3.8-flash"
+OPENROUTER_TRANSCRIBE_MODEL = "google/gemini-3.8-flash"
 # 靜態檔在 public/interview/，API 在 functions/interview/api/。
 # 網站根目錄由 public/_redirects 轉到 /interview/。
 
